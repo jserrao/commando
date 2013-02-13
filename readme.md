@@ -3,7 +3,7 @@ Commando - A Simple Guide to the Linux/OSX Command Line
 
 Have you ever sat at your computer, hopelessly googling for linux commands? Yes, yes you have. And don't worry, I have too. In fact, I did this so much that I just started taking notes for myself. Turns out this list is quite useful now, so I thought I'd share it. 
 
-Commando aims to be a simple guide to the Linux command line. It's not quite there yet, as this is just my notes but send some pull requests and hopefully we can get there. As is, I think this thing is pretty useful - at least to me. Hopefully you find it useful too.
+Commando aims to be a simple guide to the Linux command line. It's not quite there yet, as this is just my notes but send me some pull requests and hopefully we can get there. As is, I think this thing is pretty useful - at least to me. Hopefully you find it useful too.
 
 
 Index of Commands
@@ -37,7 +37,7 @@ Links to the Goods:
 * [iTerm2](http://www.iterm2.com)
 * [Guake](https://apps.ubuntu.com/cat/applications/precise/guake/)
 
-OSX has a unix-like core, so most of the commands on Linux work for OSX. There are some deviations, noted where appropriate.
+OSX has a unix-like core, so most of the commands on Linux work for OSX. There are some deviations, noted where appropriate in the command reference docs.
 
 
 How Can I Contribute?

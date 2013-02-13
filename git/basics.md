@@ -1,0 +1,20 @@
+// GIT!
+
+001.    git config --global user.name "Your Name" (tells Git what your name is)
+002.    git config --global user.email "your_email@whatever.com" (tells Git what your email is)
+003.    git init (creates a repository of the current directory)
+004.    git add your-filename-here (adds a new file)
+005.    git commit -m "First Commit" (Commits file with a message in quotes)
+006.    git status (tells you all about the git repositories' files)
+006b.   git diff head (shows me whats different between whats getting committed and whats in there now)
+007.    git add (stages changes to your repository BUT does not officially add them yet)
+007b.   git add . (stages ALL changes to your repository)
+008.    git reset (undoes changes before they are committed)
+009.    If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
+010a.	  git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
+010b.   git remote add --mirror=push state-blog-repo git@rcsm.beanstalkapp.com:/state-blog-repo.git (establishes that your local is going to push to the remote)
+011.    git push local-repo-name-here master (pushes my local up to github, 'ocal-repo-name-here MUST be the name of your repo')
+012.    git stash save (will save changes that are not committed yet, like a faux branch)
+013.    git remote -v (tells you what remote repos are connected to your local repo)
+014.    git config --global color.ui true (sets up the cool command line color coding)
+015.    /home/your-name-here/.ssh/id_rsa.pub (this is where you SSH keys live, youll have to hand the public side of your key to github)
