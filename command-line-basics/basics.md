@@ -43,4 +43,5 @@
 038.    scutil --get HostName (prints your computer's hostname - OSX)
 039.    scutil --set HostName your-name-hostname-here (changes your computer's hostname - OSX)
 040.    hostname (prints your computer's hostname - Linux)
-050.	clear (erases output in terminal window)
+050.	clear (erases output in terminal window) 
+051.	sudo smbpasswd -a your-name-here (changes your samba password for file transfer between OSes, good for virtual machines)
