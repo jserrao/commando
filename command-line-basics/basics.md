@@ -43,3 +43,4 @@
 038.    scutil --get HostName (prints your computer's hostname - OSX)
 039.    scutil --set HostName your-name-hostname-here (changes your computer's hostname - OSX)
 040.    hostname (prints your computer's hostname - Linux)
+050.	clear (erases output in terminal window)
