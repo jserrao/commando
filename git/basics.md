@@ -13,7 +13,7 @@
 009.    If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
 010a.	  git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
 010b.   git remote add --mirror=push state-blog-repo git@rcsm.beanstalkapp.com:/state-blog-repo.git (establishes that your local is going to push to the remote)
-011.    git push local-repo-name-here master (pushes my local up to github, 'ocal-repo-name-here MUST be the name of your repo')
+011.    git push local-repo-name-here master (pushes my local up to github, 'local-repo-name-here MUST be the name of your repo')
 012.    git stash save (will save changes that are not committed yet, like a faux branch)
 013.    git remote -v (tells you what remote repos are connected to your local repo)
 014.    git config --global color.ui true (sets up the cool command line color coding)
