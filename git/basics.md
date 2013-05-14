@@ -2,7 +2,7 @@
 
 001.    git config --global user.name "Your Name" (tells Git what your name is)
 002.    git config --global user.email "your_email@whatever.com" (tells Git what your email is)
-003.    git init (creadfadates a repository of the current directory)
+003.    git init (creates a repository of the current directory)
 004.    git add your-filename-here (adds a new file)
 005.    git commit -m "First Commit" (Commits file with a message in quotes)
 006.    git status (tells you all about the git repositories' files)
