@@ -19,3 +19,4 @@
 014.    git config --global color.ui true (sets up the cool command line color coding)
 015.    /home/your-name-here/.ssh/id_rsa.pub (this is where you SSH keys live, youll have to hand the public side of your key to github)
 016.	git clone git://repo-url-goes-here.git destination-folder-here (just put a space after the standard clone command to get a nice destination folder)
+017.    git clone -b branch-here remote-repo-here (clone a remote branch)
