@@ -46,3 +46,5 @@
 050.	clear (erases output in terminal window) 
 051.	sudo smbpasswd -a your-name-here (changes your samba password for file transfer between OSes, good for virtual machines)
 052.	sudo service smbd restart (restarts samba)
+053.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
+054.	rvm --default use rubygems 2.0.03 (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
