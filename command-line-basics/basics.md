@@ -48,3 +48,4 @@
 052.	sudo service smbd restart (restarts samba)
 053.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
 054.	rvm --default use rubygems 2.0.03 (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
+055.	rubygems and ruby defaults have to be set everytime you open a new terminal session in OSX
