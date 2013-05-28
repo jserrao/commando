@@ -11,7 +11,7 @@
 007b.   git add . (stages ALL changes to your repository)
 008.    git reset (undoes changes before they are committed)
 009.    If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
-010a.	  git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
+010a.	git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
 010b.   git remote add --mirror=push state-blog-repo git@rcsm.beanstalkapp.com:/state-blog-repo.git (establishes that your local is going to push to the remote)
 011.    git push local-repo-name-here master (pushes my local up to github, 'local-repo-name-here MUST be the name of your repo')
 012.    git stash save (will save changes that are not committed yet, like a faux branch)
@@ -20,3 +20,5 @@
 015.    /home/your-name-here/.ssh/id_rsa.pub (this is where you SSH keys live, youll have to hand the public side of your key to github)
 016.	git clone git://repo-url-goes-here.git destination-folder-here (just put a space after the standard clone command to get a nice destination folder)
 017.    git clone -b branch-here remote-repo-here (clone a remote branch)
+018.	git submodule add https://github.com/user-name-here/repo-name-here /destination/directory/here (puts a git submodule into your current repo)
+019.	(FORCE FLAG example) git submodule add -f repo-here directory-here (-f forces something to be added, even over the .gitignore file)
