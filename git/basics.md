@@ -22,3 +22,4 @@
 017.    git clone -b branch-here remote-repo-here (clone a remote branch)
 018.	git submodule add https://github.com/user-name-here/repo-name-here /destination/directory/here (puts a git submodule into your current repo)
 019.	(FORCE FLAG example) git submodule add -f repo-here directory-here (-f forces something to be added, even over the .gitignore file)
+020.	git status -s (does a shorter version of the status thing)
