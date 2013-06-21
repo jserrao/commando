@@ -49,3 +49,6 @@
 053.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
 054.	rvm --default use rubygems 2.0.03 (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
 055.	rubygems and ruby defaults have to be set everytime you open a new terminal session in OSX
+056.	cordova platforms add ios
+057. 	cordova platforms add android
+058. 	cordova build && cordova emulate (will build your app and emulate it so you can see what you did)
