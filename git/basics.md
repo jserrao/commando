@@ -24,4 +24,5 @@
 019.	(FORCE FLAG example) git submodule add -f repo-here directory-here (-f forces something to be added, even over the .gitignore file)
 020.	git status -s (does a shorter version of the status thing)
 021. 	git remote set-url origin https://url-goes-here.com (works to do a remote add)
-022.	git add -u (adds deleted files into the commit)
+022.	git push origin master (pushes your code up to a remote, 'origin' is remot, 'master' is your local branch - must setup a remote beforehand)
+023.	git add -u (adds deleted files into the commit)
