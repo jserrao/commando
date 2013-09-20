@@ -1,5 +1,6 @@
 // Ubuntu
 001.    sudo apt-get upgrade (gets system updates)
+001b.	sudo apt-get dist-upgrade (upgrades you to a new version of ubuntu)
 002.    sudo apt-get update (installs system updates)
 003.    sudo apt-get program-name-here (if the program has a binary build, you get it via this command)
 004a.   sudo add-apt-repository ppa:webupd8team/sublime-text-2; (gets you sublime text but any repo could be put here after the ppa: part)
