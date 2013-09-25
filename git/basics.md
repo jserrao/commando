@@ -27,3 +27,4 @@
 022.	git push origin master (pushes your code up to a remote, 'origin' is remot, 'master' is your local branch - must setup a remote beforehand)
 023.	git add -u (adds deleted files into the commit)
 024.	git config core.autocrlf false (fixes line ending errors)
+025.	git config core.safecrlf warn (allows git to actually convery CRLF (win) to LF (linux/osx) line endings)
