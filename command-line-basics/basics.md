@@ -52,3 +52,4 @@
 056.	cordova platforms add ios
 057. 	cordova platforms add android
 058. 	cordova build && cordova emulate (will build your app and emulate it so you can see what you did)
+059.	df (gives you a readout of the disk space your system has available)
