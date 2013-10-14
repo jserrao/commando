@@ -26,7 +26,7 @@
 021.    /etc/init.d/sendmail start (starts mail on server)
 022.    ~/ (Shortcut to go home directory of a given user)
 023.    Control + C (kills the process on the command line)
-024.    | pbcopy (copies something to your clipboard, so you can paste it like a human being - only in OSX)
+024.    pbcopy < ~/.ssh/id_rsa.pub (copies something to your clipboard, so you can paste it like a human being - only in OSX. This example copies your SSH key.)
 025.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
 026.    gzip PATH-HERE - gzips a file for you, which is what phpmyadmin seems to like
 027.    mysql -uUSERNAME -pPASSWORD DATABASENAME < MYDATABASE.sql (imports a DB)
