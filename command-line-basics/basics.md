@@ -43,14 +43,14 @@
 038.    scutil --get HostName (prints your computer's hostname - OSX)
 039.    scutil --set HostName your-name-hostname-here (changes your computer's hostname - OSX)
 040.    hostname (prints your computer's hostname - Linux)
-050.	clear (erases output in terminal window) 
-051.	sudo smbpasswd -a your-name-here (changes your samba password for file transfer between OSes, good for virtual machines)
-052.	sudo service smbd restart (restarts samba)
-053.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
-054.	rvm --default use rubygems 2.0.03 (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
-055.	rubygems and ruby defaults have to be set everytime you open a new terminal session in OSX
-056.	cordova platforms add ios
-057. 	cordova platforms add android
-058. 	cordova build && cordova emulate (will build your app and emulate it so you can see what you did)
-059.	df (gives you a readout of the disk space your system has available)
-060.	pwd | pbcopy (copies your current path in OSX only)
+041.	clear (erases output in terminal window) 
+042.	sudo smbpasswd -a your-name-here (changes your samba password for file transfer between OSes, good for virtual machines)
+043.	sudo service smbd restart (restarts samba)
+044.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
+045.	rvm --default use rubygems 2.0.03 (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
+046.	rubygems and ruby defaults have to be set everytime you open a new terminal session in OSX
+047.	cordova platforms add ios
+048. 	cordova platforms add android
+049. 	cordova build && cordova emulate (will build your app and emulate it so you can see what you did)
+050.	df (gives you a readout of the disk space your system has available)
+051.	pwd | pbcopy (copies your current path in OSX only)
