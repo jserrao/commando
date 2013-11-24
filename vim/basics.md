@@ -1,6 +1,6 @@
 //Vim
-001.    vim your-filename-here (vim will open file)
 
+001.    vim your-filename-here (vim will open file)
 002.    DD (delete's the current line)
 003.    :w (write file)
 004.    :q (quit Vim)
