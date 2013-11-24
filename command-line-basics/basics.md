@@ -53,3 +53,4 @@
 51.    cordova build && cordova emulate (will build your app and emulate it so you can see what you did)
 52.    df (gives you a readout of the disk space your system has available)
 53.    pwd | pbcopy (copies your current path in OSX only)
+54.    xcode-select --install (installs command line tools for xcode - only necessary on osx 10.8 and down, comes standard on osx 10.9 and up)
