@@ -29,3 +29,4 @@
 023.	git add -u (adds deleted files into the commit)
 024.	git config core.autocrlf false (fixes line ending errors)
 025.	git config core.safecrlf warn (allows git to actually convery CRLF (win) to LF (linux/osx) line endings)
+26.	  git config --global --add color.ui true (turns git's coloring on)
