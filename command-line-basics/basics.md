@@ -56,3 +56,6 @@
 54.    xcode-select --install (installs command line tools for xcode - only necessary on osx 10.8 and down, comes standard on osx 10.9 and up)
 55.    chrome://flags (IN BROWSER WINDOW, NOT COMMAND LINE - you play with chrome's plumbing, like disabling that stupid notifications center that tacked into OSX)
 56.    If you install node.js, put it here: /usr/local/bin/npm
+57.    sudo npm install -g yo (if you have node.js, this installs yeoman, bower and grunt)
+58.    sudo npm install -g generator-webapp (puts scaffolding in for creating webapps)
+59.    
