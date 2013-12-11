@@ -58,4 +58,4 @@
 56.    If you install node.js, put it here: /usr/local/bin/npm
 57.    sudo npm install -g yo (if you have node.js, this installs yeoman, bower and grunt)
 58.    sudo npm install -g generator-webapp (puts scaffolding in for creating webapps)
-59.    
+59.    grunt (typing this in a folder with grunt build scripts preps your app for deployment)
