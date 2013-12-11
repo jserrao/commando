@@ -59,3 +59,5 @@
 57.    sudo npm install -g yo (if you have node.js, this installs yeoman, bower and grunt)
 58.    sudo npm install -g generator-webapp (puts scaffolding in for creating webapps)
 59.    grunt (typing this in a folder with grunt build scripts preps your app for deployment)
+60.    sudo gem install sass (installs the CSS preprocessor SASS - you need to have Ruby + RVM installed first)
+61.    sass -v (calls up the sass version)
