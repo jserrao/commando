@@ -61,3 +61,6 @@
 59.    grunt (typing this in a folder with grunt build scripts preps your app for deployment)
 60.    sudo gem install sass (installs the CSS preprocessor SASS - you need to have Ruby + RVM installed first)
 61.    sass -v (calls up the sass version)
+62.    grunt test (preps your app for deployment)
+63.    grunt server (gets your localhost going)
+64.    grunt whatever-command-you-want-here --force (flag will override verbose testing periods)
