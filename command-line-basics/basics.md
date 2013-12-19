@@ -64,3 +64,6 @@
 62.    grunt test (preps your app for deployment)
 63.    grunt server (gets your localhost going)
 64.    grunt whatever-command-you-want-here --force (flag will override verbose testing periods)
+65.    bower search (shows entire bower JS library)
+66.    bower search your-JS-package-here (searches the directory)
+67.    bower install your-JS-package-here (adds a JS dependency to the project in your folder, works in conjunction with Yeoman)
