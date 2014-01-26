@@ -68,5 +68,6 @@
 66.    bower search your-JS-package-here (searches the directory)
 67.    bower install your-JS-package-here (adds a JS dependency to the project in your folder, works in conjunction with Yeoman)
 68.    ssh root@192.###.###.### (gives you shell access to a server, will prompt for shell password)
+69.    <Return> ~ . (kills an open ssh session)
 69.    service httpd start (starts your apache server, assumes apache is installed on the box)
 70.    service mysqld start (starts up the mysql server, assumes mysql is installed on the box)
