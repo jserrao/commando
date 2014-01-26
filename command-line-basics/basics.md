@@ -17,6 +17,7 @@
 15.    cd /home/your-username-here (!where you are!)
 16.    mv /path/goes/here/filename /path/goes/here/your-file-name-2  (mv moves a file)
 17.    cp /path/goes/here/filename /path/goes/here/your-file-name-2 (copies file in same folder)
+18.    cp -r /path/goes/here/filename /path/goes/here/your-file-name-2 (copies a folder to a new destination)
 18.    ls (spits out list of directory view)
 19.    try to put a first letter on the line, then use TAB key and it tries to autocomplete - nice!
 20.    find -name hosts (get)
