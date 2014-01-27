@@ -18,7 +18,6 @@
 16.    mv /path/goes/here/filename /path/goes/here/your-file-name-2  (mv moves a file)
 17.    cp /path/goes/here/filename /path/goes/here/your-file-name-2 (copies file in same folder)
 18.    cp -a /path/goes/here/. /path/goes/here/ (copies the contents of an existing folder into a previously defined folder)
-18.    ls (spits out list of directory view)
 19.    try to put a first letter on the line, then use TAB key and it tries to autocomplete - nice!
 20.    find -name hosts (get)
 21.    sudo (switch user, do xyz...)
@@ -72,3 +71,5 @@
 69.    <Return> ~ . (kills an open ssh session)
 69.    service httpd start (starts your apache server, assumes apache is installed on the box)
 70.    service mysqld start (starts up the mysql server, assumes mysql is installed on the box)
+71.    ls (spits out list of directory view)
+72.    scp -r /Users/username-here/desktop/dir ssh-username-here@ftp.domain.com:/home/user/public_html/dir (scp securely copies a directory from one place to another)
