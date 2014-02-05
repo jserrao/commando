@@ -73,4 +73,5 @@
 70.    service mysqld start (starts up the mysql server, assumes mysql is installed on the box)
 71.    ls (spits out list of directory view)
 72.    scp -r /Users/username-here/desktop/dir ssh-username-here@ftp.domain.com:/home/user/public_html/dir (scp securely copies a directory from one place to another)
-73.    pwd | tr -d '\n' | pbcopy (copies command line path in OSX - h/t: bradlanders.com)
+73.    pwd | tr -d '\n' | pbcopy (copies command line path in OSX - h/t: bradlanders.com) - make an alias of this so its less crazy next time: alias cpwd="pwd | tr -d '\n' | pbcopy"
+74.    cpwd (will copy a path to your clipboard, after you make the alias in the above step)
