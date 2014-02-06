@@ -76,3 +76,4 @@
 74.    cpwd (will copy a path to your clipboard, after you make the alias in the above step - aliases will only work locally - YOUVE BEEN WARNED!)
 75.    service httpd start (starts your apache server, assumes apache is installed on the box)
 76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on an ssh server)
+77.    CNTL + C (kills command line process dead)
