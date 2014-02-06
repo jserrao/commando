@@ -77,3 +77,4 @@
 75.    service httpd start (starts your apache server, assumes apache is installed on the box)
 76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on an ssh server)
 77.    CNTL + C (kills command line process dead)
+78.    tar -cvzf youfilename-here-dump.tar.gz /home/your/path/here (tars up a directory for you)  
