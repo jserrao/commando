@@ -78,3 +78,4 @@
 76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on an ssh server)
 77.    CNTL + C (kills command line process dead)
 78.    tar -cvzf youfilename-here-dump.tar.gz /home/your/path/here (tars up a directory for you)  
+79.    ln -s /path/to/file /path/to/symlink (links file to a path with symlink)
