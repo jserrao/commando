@@ -79,3 +79,4 @@
 77.    CNTL + C (kills command line process dead)
 78.    tar -cvzf youfilename-here-dump.tar.gz /home/your/path/here (tars up a directory for you)  
 79.    ln -s /path/to/file /path/to/symlink (links file to a path with symlink)
+80.    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' (OSX ONLY! - gets you the SSID of the wireless network you are on)
