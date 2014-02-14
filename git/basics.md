@@ -28,3 +28,4 @@
 26.   git config core.autocrlf false (fixes line ending errors)
 27.   git config core.safecrlf warn (allows git to actually convery CRLF (win) to LF (linux/osx) line endings)
 28.   git config --global --add color.ui true (turns git's coloring on)
+29.   git rm file-name-here.txt (removes file | directory from the repo)
