@@ -30,3 +30,4 @@
 28.   git config --global --add color.ui true (turns git's coloring on)
 29.   git rm file-name-here.txt (removes file | directory from the repo)
 30.   git ls-tree --full-tree -r HEAD (list of all files in your repo)
+31.   git branch (shows you a list of all branches; the one with a '*' is your current branch)
