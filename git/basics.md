@@ -32,3 +32,4 @@
 30.   git ls-tree --full-tree -r HEAD (list of all files in your repo)
 31.   git branch (shows you a list of all branches; the one with a '*' is your current branch)
 32.   git tag -a v1.4 -m 'my version 1.4' (tags your branch with a version)
+33.   git show v0.1 (git will show whats going on with a given tag)
