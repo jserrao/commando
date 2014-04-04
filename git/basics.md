@@ -8,7 +8,7 @@
 6.   git status (tells you all about the git repositories' files).   git diff head (shows me whats different between whats getting committed and whats in there now)
 7.   git add (stages changes to your repository BUT does not officially add them yet)
 8.   git add --all (stages ALL changes to your repository, new in Git 2.0)
-9.   git reset (undoes changes before they are committed). If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
+9.   git reset HEAD filename-here (undoes / unstages changes before they are committed). If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
 10.   git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
 11.   git remote add --mirror=push state-blog-repo git@rcsm.beanstalkapp.com:/state-blog-repo.git (establishes that your local is going to push to the remote)
 12.   git push local-repo-name-here master (pushes my local up to github, 'local-repo-name-here MUST be the name of your repo')
