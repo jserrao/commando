@@ -82,4 +82,5 @@
 80.    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' (OSX ONLY! - gets you the SSID of the wireless network you are on)
 81.    Command + K (OSX clears Bash cache)
 82.    rsync -rv --exclude='.git' /Users/your-name-here/sites/personal/example.com username-here@you-site.com:/home/user/public_html/site-folder (move a file up to a server via SSH while excluding .git | -r = recursive, -v = verbose output)
-83.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
+83.    rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
+84.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
