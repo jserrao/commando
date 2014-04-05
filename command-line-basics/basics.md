@@ -84,3 +84,4 @@
 82.    rsync -rv --exclude='.git' /Users/your-name-here/sites/personal/example.com username-here@you-site.com:/home/user/public_html/site-folder (move a file up to a server via SSH while excluding .git | -r = recursive, -v = verbose output)
 83.    rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
 84.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
+85.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
