@@ -86,4 +86,5 @@
 84.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
 85.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
 86.    cd "Foldername with a Space" (must use quotes to espace space characters on the command line)
-87.    /var/www/html (This is where your website should live, if you are navigating from the root on a linux server.)
+87.    /var/www/html or /usr/local/apache/htdocs (This is where your website should/could live on a linux server. Paths are from the root)
+88.    
