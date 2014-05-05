@@ -34,3 +34,4 @@
 32.   git tag -a v1.4 -m 'my version 1.4' (tags your branch with a version)
 33.   git show v0.1 (git will show whats going on with a given tag)
 34.   git rm -r -f .sass-cache/ (recursively removes a whole bunch of junk from your repo)
+35.   git checkout -b your-name-here/your-topic-here (establishes a new branch, with your name and branch thing - no spaces)
