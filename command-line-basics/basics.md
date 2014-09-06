@@ -75,7 +75,7 @@
 73.    pwd | tr -d '\n' | pbcopy (copies command line path in OSX - h/t: bradlanders.com) - make an alias of this so its less crazy next time: alias cpwd="pwd | tr -d '\n' | pbcopy"
 74.    cpwd (will copy a path to your clipboard, after you make the alias in the above step - aliases will only work locally - YOUVE BEEN WARNED!)
 75.    service httpd start (starts your apache server, assumes apache is installed on the box)
-76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on an ssh server)
+76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on a ssh server)
 77.    CNTL + C (kills command line process dead)
 78.    tar -cvzf youfilename-here-dump.tar.gz /home/your/path/here (tars up a directory for you)  
 79.    ln -s /path/to/file /path/to/symlink (links file to a path with symlink)
