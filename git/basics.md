@@ -37,3 +37,7 @@
 35.   git branch your-branch-here (makes a new branch)
 36.   git checkout your-branch-here (switches to doing commits against that branch)
 37.   git checkout -b your-name-here/your-topic-here (establishes a new branch and switches to it so that future commits will be made against it)
+38.   git remote -v (shows you all of your remotes)
+39.   git stash clear (deletes everything off of stash)
+40.   git merge branch-name-here (will merge branch-name-here with whatever branch you are on, do 'git pull' on your branch and make sure it's up to date with origin before merging!)
+41.   git reset --hard [hash] (resets git to a given commit in the past on your branch)
