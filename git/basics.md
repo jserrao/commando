@@ -41,3 +41,4 @@
 39.   git stash clear (deletes everything off of stash)
 40.   git merge branch-name-here (will merge branch-name-here with whatever branch you are on, do 'git pull' on your branch and make sure it's up to date with origin before merging!)
 41.   git reset --hard [hash] (resets git to a given commit in the past on your branch)
+42.   git branch -v (shows all branches, active one has '*' next to its name)
