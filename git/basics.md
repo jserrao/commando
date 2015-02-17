@@ -42,3 +42,4 @@
 40.   git merge branch-name-here (will merge branch-name-here with whatever branch you are on, do 'git pull' on your branch and make sure it's up to date with origin before merging!)
 41.   git reset --hard \[hash\] (resets git to a given commit in the past on your branch) 
 42.   git branch -v (shows all branches, active one has '*' next to its name)
+43.   git log -n 5 --author=your-name-here (shows the last 5 commits from a given author)
