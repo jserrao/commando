@@ -43,3 +43,4 @@
 41.   git reset --hard \[hash\] (resets git to a given commit in the past on your branch) 
 42.   git branch -v (shows all branches, active one has '*' next to its name)
 43.   git log -n 5 --author=your-name-here (shows the last 5 commits from a given author)
+44.   git reset (undoes whatever you staged, all of it)
