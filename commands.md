@@ -153,7 +153,6 @@
 44.   git reset (undoes whatever you staged, all of it)
 
 
-=============
 ## Homebrew (package manager for Mac)
 
 00.	   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" (installs homebrew)
@@ -165,14 +164,13 @@
 06.    brew [whatever] --dry-run (tells you whats going to happen before you do it)
 
 
-=============
 ## Transferring things (SFTP, SCP, rsync)
 
-# SCP
+### SCP
 01.    [Everything SCP - go here](http://kb.iu.edu/data/agye.html)
 02.    scp -r local-path-goes-here remote-user@remote-hostname:your-remote-path-goes-here (EXAMPLE: scp -r /users/your-name/documents/mapbox/export/tile-set.mbtiles user@61.56.90.123:/home/user/mapbox-tiles/tile-set.mbtiles, the -r makes it recurse through the entire folder)
 
-# SFTP
+### SFTP
 01.    sftp your-host-here (gets you into)
 02.    mput /your/path/here/filename.txt (puts your file on the server, navigate to where you want the file first!)
 
@@ -181,7 +179,6 @@
 03.    rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
 
 
-=============
 ## Ubuntu
 
 001.    sudo apt-get upgrade (gets system updates)
@@ -192,7 +189,7 @@
 004b.   sudo apt-get update; (run update again)
 004c.   sudo apt-get install sublime-text (installs sublime)
 
-# Adds pbcopy to ubuntu
+### Adds pbcopy to ubuntu
 005a.   sudo apt-get install xsel
 005b.   alias pbcopy='xsel --clipboard --input' (gets you pbcopy)
 005c.   alias pbpaste='xsel --clipboard --output' (gets you pbpaste)
@@ -204,7 +201,6 @@
 010.    CNTL+H in file browser (shows hidden files in Ubuntu)
 
 
-=============
 ##Vim (an annoying text editor that you will come into contact with on the command line)
 
 01.    vim your-filename-here (vim will open OR create file)
