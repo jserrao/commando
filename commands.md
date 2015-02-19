@@ -89,7 +89,6 @@
 87.    /var/www/html or /usr/local/apache/htdocs (This is where your website should/could live on a linux server. Paths are from the root)
 
 
-=============
 ## Front-end Tooling
 
 01.    	sudo gem install sass (installs the CSS preprocessor SASS - you need to have Ruby + RVM installed first)
@@ -103,7 +102,6 @@
 09.		npm install -g yo generator-wordpress (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
 
 
-=============
 ## GIT! (super useful to do this on the command line versus GUI)
 
 00.	  brew install git (installs git, assumes you have homebrew)
@@ -174,31 +172,31 @@
 01.    sftp your-host-here (gets you into)
 02.    mput /your/path/here/filename.txt (puts your file on the server, navigate to where you want the file first!)
 
-# rsync (the only way to fly)
+### rsync (the only way to fly)
 01.    rsync -rv --exclude='.git' /Users/your-name-here/sites/personal/example.com username-here@you-site.com:/home/user/public_html/site-folder (move a file up to a server via SSH while excluding .git | -r = recursive, -v = verbose output)
 03.    rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
 
 
 ## Ubuntu
 
-001.    sudo apt-get upgrade (gets system updates)
-001b.	sudo apt-get dist-upgrade (upgrades you to a new version of ubuntu)
-002.    sudo apt-get update (installs system updates)
-003.    sudo apt-get program-name-here (if the program has a binary build, you get it via this command)
-004a.   sudo add-apt-repository ppa:webupd8team/sublime-text-2; (gets you sublime text but any repo could be put here after the ppa: part)
-004b.   sudo apt-get update; (run update again)
-004c.   sudo apt-get install sublime-text (installs sublime)
+01.    sudo apt-get upgrade (gets system updates)
+02.	   sudo apt-get dist-upgrade (upgrades you to a new version of ubuntu)
+03.    sudo apt-get update (installs system updates)
+04.    sudo apt-get program-name-here (if the program has a binary build, you get it via this command)
+05.    sudo add-apt-repository ppa:webupd8team/sublime-text-2; (gets you sublime text but any repo could be put here after the ppa: part)
+06.    sudo apt-get update; (run update again)
+07.    sudo apt-get install sublime-text (installs sublime)
 
 ### Adds pbcopy to ubuntu
-005a.   sudo apt-get install xsel
-005b.   alias pbcopy='xsel --clipboard --input' (gets you pbcopy)
-005c.   alias pbpaste='xsel --clipboard --output' (gets you pbpaste)
+08.    sudo apt-get install xsel
+09.    alias pbcopy='xsel --clipboard --input' (gets you pbcopy)
+10.    alias pbpaste='xsel --clipboard --output' (gets you pbpaste)
 
-006.    sudo whereis your-filename-here (tells you where a certain file is, but it really doesnt work)
-007.    sudo /usr/share/webmin/changepass.pl /etc/webmin root new-password (changes your webmin password, which is similar to an act of god)
-008.    sudo a2enmod rewrite (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
-009.    /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso (path for virtual box guest additions if you are running an Ubuntu dev machine from OSX)
-010.    CNTL+H in file browser (shows hidden files in Ubuntu)
+11.    sudo whereis your-filename-here (tells you where a certain file is, but it really doesnt work)
+12.    sudo /usr/share/webmin/changepass.pl /etc/webmin root new-password (changes your webmin password, which is similar to an act of god)
+13.    sudo a2enmod rewrite (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
+14.    /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso (path for virtual box guest additions if you are running an Ubuntu dev machine from OSX)
+15.    CNTL+H in file browser (shows hidden files in Ubuntu)
 
 
 ##Vim (an annoying text editor that you will come into contact with on the command line)
