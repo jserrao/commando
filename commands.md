@@ -186,12 +186,9 @@
 05.    sudo add-apt-repository ppa:webupd8team/sublime-text-2; (gets you sublime text but any repo could be put here after the ppa: part)
 06.    sudo apt-get update; (run update again)
 07.    sudo apt-get install sublime-text (installs sublime)
-
-### Adds pbcopy to ubuntu
-08.    sudo apt-get install xsel
+08.    sudo apt-get install xsel (helps get you pbcopy on ubuntu)
 09.    alias pbcopy='xsel --clipboard --input' (gets you pbcopy)
 10.    alias pbpaste='xsel --clipboard --output' (gets you pbpaste)
-
 11.    sudo whereis your-filename-here (tells you where a certain file is, but it really doesnt work)
 12.    sudo /usr/share/webmin/changepass.pl /etc/webmin root new-password (changes your webmin password, which is similar to an act of god)
 13.    sudo a2enmod rewrite (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
