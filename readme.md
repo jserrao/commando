@@ -10,11 +10,11 @@ Index of Commands
 -----
 
 So far, I have the following breakdowns of commands:
-* Coda
 * Command Line Basics
-* Drush
+* Front-end Tooling
 * Git
-* Transferring (SCP/SFTP)
+* Homebrew (Mac package manager)
+* Transfer protocols (SFTP, SCP and rsync)
 * Ubuntu
 * Vim
 
@@ -53,7 +53,7 @@ your-username-here
 your-whatever-here, etc
 ```
 
-If you want to add a whole new section, do it! I'd just ask that you put it into a folder so we can get a bird's-eye view of what's going on in this repo. There pretty much isnt any pull request I'm going to deny - shoot away.
+If you want to add a whole new section, do it! I'd just ask that you put it into a new file as a pull request so we can get a bird's-eye view of what's going on in this repo. There pretty much isnt any pull request I'm going to deny - shoot away.
 
 
 Obligatory Arnold Shot from Commando
