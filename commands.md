@@ -149,6 +149,8 @@
 42.   git branch -v (shows all branches, active one has '*' next to its name)
 43.   git log -n 5 --author=your-name-here (shows the last 5 commits from a given author)
 44.   git reset (undoes whatever you staged, all of it)
+45.   git push origin --delete your-branch-here (deletes remote branches)
+46.   git branch -D your-branch-here (deletes local branches)
 
 
 ## Homebrew (package manager for Mac)
