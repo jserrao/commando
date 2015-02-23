@@ -154,6 +154,11 @@
 47.   git branch -d your-branch-here (deleter local branches, will stop if uncommited changes are on branch)
 
 
+## Heroku (Salesforce app cloud)
+00.    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
+01.    heroku login (will log you into your apps, prompts heroku info)
+
+
 ## Homebrew (package manager for Mac)
 
 00.	   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" (installs homebrew)
