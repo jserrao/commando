@@ -166,6 +166,11 @@
 07.    brew install your-package-here (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
 
 
+## Mongo
+01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
+02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo now, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
+
+
 ## Transferring things (SFTP, SCP, rsync)
 
 ### SCP
