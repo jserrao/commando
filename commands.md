@@ -1,4 +1,4 @@
-## Basics of the CLI (command line interface for n00bs, some are missing below do to reordering)
+## Basics of the CLI (command line interface for n00bs)
 
 1.    DONT DO THIS: rm -rf / (this means delete everything)
 2.    ssh webadmin@1.2.3.4 (gets you into a server)
@@ -163,6 +163,7 @@
 04.    brew link --overwrite your-package-here (forces symlink creation)
 05.    brew prune (removes dead symlinks)
 06.    brew [whatever] --dry-run (tells you whats going to happen before you do it)
+07.    brew install your-package-here (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
 
 
 ## Transferring things (SFTP, SCP, rsync)
@@ -199,7 +200,7 @@
 15.    CNTL+H in file browser (shows hidden files in Ubuntu)
 
 
-##Vim (an annoying text editor that you will come into contact with on the command line)
+##Vim (an annoying text editor)
 
 01.    vim your-filename-here (vim will open OR create file)
 02.    DD (delete's the current line)
