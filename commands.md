@@ -99,7 +99,8 @@
 06.    	bower search (shows entire bower JS library)
 07.    	bower search your-JS-package-here (searches the directory)
 08.    	bower install your-JS-package-here (adds a JS dependency to the project in your folder, works in conjunction with Yeoman)
-09.		npm install -g yo generator-wordpress (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
+09.     bower install your-js-package-here --save (adds your package into bower.json dependency list)    	
+10.		npm install -g yo generator-wordpress (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
