@@ -173,7 +173,8 @@
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
-02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo now, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
+02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
+03.    mongod (starts the mongo server from CLI)
 
 
 ## Transferring things (SFTP, SCP, rsync)
