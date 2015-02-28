@@ -26,12 +26,12 @@
 24.    /etc/init.d/sendmail start (starts mail on server)
 25.    ~/ (Shortcut to go home directory of a given user)
 26.    Control + C (kills the process on the command line)
-27.    pbcopy < ~/.ssh/id_rsa.pub (copies something to your clipboard, so you can paste it like a human being - only in OSX. This example copies your SSH key.)
-28.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
+27.    Command + K (OSX clears Bash cache)
+28.    Control + L (clears the terminal window) 
 29.    gzip PATH-HERE - gzips a file for you, which is what phpmyadmin seems to like
 30.    mysql -uUSERNAME -pPASSWORD DATABASENAME < MYDATABASE.sql (imports a DB)
-31.    control c (stops the process on the command line)
-32.    shift+control+v (paste into terminal)
+31.    
+32.    shift+control+v (paste into terminal, OSX)
 33.    chmod +x or chmod 777 (execute permission to make scripts happen)
 34.    cd ~/.ssh (see if you have ssh keys installed)
 35.    ssh-keygen -t rsa -C "youremail@host.com" (installs SSH keys - needed for git transactions and other stuff)
@@ -56,11 +56,11 @@
 54.    xcode-select --install (installs command line tools for xcode - only necessary on osx 10.8 and down, comes standard on osx 10.9 and up)
 55.    chrome://flags (IN BROWSER WINDOW, NOT COMMAND LINE - you play with chrome's plumbing, like disabling that stupid notifications center that tacked into OSX)
 56.    If you install node.js, put it here: /usr/local/bin/npm
-57.    sudo npm install -g yo (if you have node.js, this installs yeoman, bower and grunt)
-58.    sudo npm install -g generator-webapp (puts scaffolding in for creating webapps)
+57.    npm install -g yo (if you have node.js, this installs yeoman, bower and grunt)
+58.    npm install -g generator-webapp (puts scaffolding in for creating webapps)
 59.	   sudo chown your-user-name-here /usr/local/your/root/path/here (changes ownership of various files via CLI)
-60.
-61.
+60.    pbcopy < ~/.ssh/id_rsa.pub (copies something to your clipboard, so you can paste it like a human being - only in OSX. This example copies your SSH key.)
+61.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
 62.
 63.
 64.
@@ -76,17 +76,13 @@
 74.    cpwd (will copy a path to your clipboard, after you make the alias in the above step - aliases will only work locally - YOUVE BEEN WARNED!)
 75.    service httpd start (starts your apache server, assumes apache is installed on the box)
 76.    ssh -p #### username-here@server-name-here (connect to a specific port (non-22) on a ssh server)
-77.    CNTL + C (kills command line process dead)
+77.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
 78.    tar -cvzf youfilename-here-dump.tar.gz /home/your/path/here (tars up a directory for you)  
 79.    ln -s /path/to/file /path/to/symlink (links file to a path with symlink)
 80.    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}' (OSX ONLY! - gets you the SSID of the wireless network you are on)
-81.    Command + K (OSX clears Bash cache)
-82.
-83.
-84.    htpasswd -c /user/your-name-here/domain.com/.htpasswd admin (sets up the encrypted .htpasswd file youll need to password protect your apache-based server - will prompt for password, assumes you have apache 2.x installed on your server)
-85.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
-86.    cd "Foldername with a Space" (must use quotes to espace space characters on the command line)
-87.    /var/www/html or /usr/local/apache/htdocs (This is where your website should/could live on a linux server. Paths are from the root)
+81.    /var/www/html or /usr/local/apache/htdocs (This is where your website should/could live on a linux server. Paths are from the root)
+82.    cd "Foldername with a Space" (must use quotes to espace space characters on the command line)
+83.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
 
 
 ## Front-end Tooling
@@ -171,8 +167,8 @@
 06.    brew [whatever] --dry-run (tells you whats going to happen before you do it)
 07.    brew install your-package-here (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
 08.    usr/local/Cellar (where Homebrew installs stuff)
-09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew)
-10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff)
+09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
+10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff if you use Homebrew)
 
 
 ## Mongo
