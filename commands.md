@@ -149,6 +149,8 @@
 45.   git push origin --delete your-branch-here (deletes remote branches)
 46.   git branch -D your-branch-here (deletes local branches, overrides conflicts)
 47.   git branch -d your-branch-here (deleter local branches, will stop if uncommited changes are on branch)
+48.   echo .DS_Store > ~/.gitignore_global (creates a global .gitignore_global file to store files you never want in your repo) 
+49.   git config --global core.excludesfile ~/.gitignore_global (will permanently ignore .DS_Store files in OSX)
 
 
 ## Heroku (Salesforce app cloud)
