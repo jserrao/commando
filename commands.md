@@ -30,7 +30,7 @@
 28.    Control + L (clears the terminal window) 
 29.    gzip PATH-HERE - gzips a file for you, which is what phpmyadmin seems to like
 30.    mysql -uUSERNAME -pPASSWORD DATABASENAME < MYDATABASE.sql (imports a DB)
-31.    
+31.    host your-domain-here (shows you how the DNS resolves)
 32.    shift+control+v (paste into terminal, OSX)
 33.    chmod +x or chmod 777 (execute permission to make scripts happen)
 34.    cd ~/.ssh (see if you have ssh keys installed)
