@@ -1,0 +1,245 @@
+// CSS Flexbox Basics
+
+
+// Gives a box the flexbox ruleset
+.random-property {
+	display: flex;
+}
+
+
+// #################### ALIGNMENT - Main Axis (Horizontal) ####################
+// Every box you give a 'display: flex;' property gets two axes (vertical / horiontal).
+// Items flow from top to bottom on the vertical axis and left to right on the horizontal axis
+// To move items along the main (horizontal) axis, you set the 'justify-content' parameter
+
+.random-property {
+	display: flex;
+  justify-content: flex-start;        // content will be left-aligned
+  justify-content: center;            // content will be left-aligned
+  justify-content: flex-end;          // content will be right-aligned
+}
+
+
+// You can also literally justify stuff with space-between and space-around
+.random-property {
+  display: flex;
+  justify-content: space-between;     // justifies left > right all objects in the container
+  justify-content: space-around;      // leaves a little space on the extreme left and right of the first/last elements, respectively
+}
+
+
+// #################### ALIGNMENT - Seconday Axis (Vertical) ####################
+// Very similar to the justify-content rules
+.another-random-property {
+  display: flex;
+  align-items: flex-start;            // content will be top-aligned
+  align-items: center;                // content will be centered
+  align-items: flex-end;              // content will be right-aligned
+}
+
+// Difference is that the vertical axis contains other logic about the height of the elements
+// By default this is set to 'stretch'
+.another-random-property {
+  display: flex;
+  align-items: stretch;               // DEFAULT: content will run from top of viewport to bottom
+}
+
+// It can also be set to baseline, which lines up the content inside of each flex object to the same horizontal level
+.another-random-property {
+  display: flex;
+  align-items: baseline;              // content will be top-aligned
+}
+
+
+// #################### ALIGNMENT - Axial Switch ####################
+// Override direction of axes
+.property-18 {
+  display: flex;
+  flex-direction: row;                // horizonal, flows left to right
+  flex-direction: row-reverse;        // horizontal, flows right to left (switches meaning of flex-start property)
+  flex-direction: column;             // main axis vertical, flow top to bottom
+  flex-direction: column-reverse;     // vertical, flow bottom to top
+}
+
+
+// #################### Line Wrapping ####################
+// flex-wrap's default state 'nowrap' means as you add items, they stay on the same line
+.property-5000 {
+  display: flex;
+  flex-wrap: nowrap; 
+}
+
+// flex-wrap direction looks at the flex-direction to know where to put the next row
+.property-5000 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// flex-wrap reverse will start new rows moving inverse to your set flex-direction
+// ie, If you have flex-direction: row; flex-wrap: wrap-reverse; would yield row 1, bottom, row 2 top
+.property-6000 {
+  display: flex;
+  flex-direction: row;                // horizonal, flows left to right
+  flex-wrap: wrap-reverse;            // row 1 bottom, row 2 top
+}
+
+// You can do the same thing with flex-wrap if flex-direction is column
+.property-7000 {
+  display: flex;
+  flex-direction: column;             // horizonal, flows left to right
+  flex-wrap: wrap;                    // column 1 goes left, column 2 goes right
+  flex-wrap: wrap-reverse;            // column 1 goes right, column 2 goes left
+}
+
+
+// #################### Alignment of content ####################
+// align-content allows you to push content around wherever you want it.
+.one-more-property {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: nowrap;                  // unnecessary as this is the default, but im putting it here for readability
+  align-content: flex-start;          // pushed to very top of page
+  align-content: center;              // center alignment
+  align-content: flex-end;            // pushed to bottom of page
+  align-content: space-between;       // pushes multi-row layouts to top and bottom with all whitespace between the rows
+  align-content: space-around;        // centers multiple rows with equal padding between each row (awesome)
+  align-content: 
+}
+
+
+// #################### Other stuff ####################
+// flex-flow combines flex-direction and flex-wrap into one rule
+.two-more-properties {
+  display: flex;
+  flex-flow: column wrap;              // combined property, like 'background'; 
+}
+
+
+// #################### Growing and Shrinking on Child Elements ####################
+// When you set an object to 'display:flex;' you've really set three properties
+// 1- flex-grow, 2-flex-shrink and 3-flex-basis
+
+// #################### Flex-grow ####################
+// The children look flex-grow to see the ratio of the row container they will take up
+// In this example, child-1 has grow set to 1 and child-2 has grow set to 2
+// Therefore, child-2 takes up twice as much room as one
+// As the container scales up and down, the ratios hold
+
+
+// All children will sit in the same left > right row
+.something-else {
+  display: flex;
+  flex-flow: row nowrap;              
+
+  .child-1 {
+    display: flex;
+    flex-grow: 1;                        // each box takes up same amount of space in its container
+  }
+
+  .child-2 {
+    display: flex;
+    flex-grow: 2;                        // this box will grow twice as much as child-1
+  }
+}
+
+// #################### Flex-shrink ####################
+// This rule tells browser what to do when there isn't enough room for your objects
+// If you have two children, next to each other they will shrink based on the percentage of flex-shrink
+// In this example, child-1 is allowed to remain while child-2 is set to 0, which means it will disappear
+
+// All children will sit in the same left > right row
+.something-else {
+  display: flex;
+  flex-flow: row nowrap;              
+
+  .child-1 {
+    flex-shrink: 1;                       // This box will stay the same size
+  }
+
+  .child-2 {
+    flex-shrink: 0;                       // This box will slowly disappear as the container shrinks away
+  }
+}
+
+// #################### Flex-basis ####################
+// Flex-basis is basically the padding around each flex element, set on the children
+// By default, flex-basis is set to auto which means the space around each element is the same
+// In this example, all three boxes will share the same space
+
+.yes-im-a-container {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-basis: auto;              
+
+  .child-1 {
+    flex-grow: 1;
+  }
+
+  .child-2 {
+    flex-grow: 1; 
+  }
+
+  .child-3 {
+    flex-grow: 1; 
+  }  
+}
+
+// Combined flex property is a shorthand for setting flex-grow, flex-shrink and flex-basis
+// They are shown here implemented and in order of their functionality
+.super-flex-container {
+  display: flex;
+  flex: 3 0 0;                            // set flex-grow: 3; flex-shrink: 0; flex-basis: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
