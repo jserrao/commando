@@ -111,8 +111,8 @@
 07.   git add (stages changes to your repository BUT does not officially add them yet)
 08.   git add --all (stages ALL changes to your repository, new in Git 2.0)
 09.   git reset HEAD filename-here (undoes / unstages changes before they are committed). If you dont specify a comment, the system will drop you into Vim (text editor).  Hit ESCAPE key to change modes after inserting text...
-10.   git remote add local-repo-name-here git@github.com:jserrao/John-is-becoming-self-aware.git (basically this means you're connecting git to a remote git repository)
-11.   git remote add --mirror=push state-blog-repo git@rcsm.beanstalkapp.com:/state-blog-repo.git (establishes that your local is going to push to the remote)
+10.   git remote add local-repo-name-here git@github.com:your-name-here/repo-name-here.git (basically this means you're connecting git to a remote git repository)
+11.   git remote add --mirror=push repo-name-here git@your.server.here:/your-repo-here.git (establishes that your local is going to push to the remote)
 12.   git push local-repo-name-here master (pushes my local up to github, 'local-repo-name-here MUST be the name of your repo')
 13.   git stash save (will save changes that are not committed yet, like a faux branch)
 14.   git remote -v (tells you what remote repos are connected to your local repo)
@@ -151,6 +151,7 @@
 47.   git branch -d your-branch-here (deleter local branches, will stop if uncommited changes are on branch)
 48.   echo .DS_Store > ~/.gitignore_global (creates a global .gitignore_global file to store files you never want in your repo) 
 49.   git config --global core.excludesfile ~/.gitignore_global (will permanently ignore .DS_Store files in OSX)
+50.   git checkout --track origin/your-branch-here (pulls in new remote branch to your local repo)
 
 
 ## Heroku (Salesforce app cloud)
