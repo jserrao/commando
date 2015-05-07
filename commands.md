@@ -152,6 +152,7 @@
 48.   echo .DS_Store > ~/.gitignore_global (creates a global .gitignore_global file to store files you never want in your repo) 
 49.   git config --global core.excludesfile ~/.gitignore_global (will permanently ignore .DS_Store files in OSX)
 50.   git checkout --track origin/your-branch-here (pulls in new remote branch to your local repo)
+51.   git remote rename old-repo-here new-repo-here (renames your remote repo)
 
 
 ## Heroku (Salesforce app cloud)
