@@ -183,6 +183,9 @@
 4.   /usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here' (sets new root password for mysql on your system)
 5.   /usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password' (finishes setting up mysql new root password)
 6.   /usr/local/opt/mysql/bin/mysql_secure_installation (allows for production server-level installation)
+7.   mysqladmin (command to do just about everything with mysql)
+8.   mysqld (starts mysql server)
+9.   mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
@@ -224,7 +227,7 @@
 15.    CNTL+H in file browser (shows hidden files in Ubuntu)
 
 
-##Vim (an annoying text editor)
+## Vim (an annoying text editor)
 
 01.    vim your-filename-here (vim will open OR create file)
 02.    DD (delete's the current line)
