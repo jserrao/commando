@@ -176,6 +176,13 @@
 09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
 10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff if you use Homebrew)
 
+## MySQL Server (assumes use of homebrew)
+1.   brew install mysql (starts mysql package installation via homebrew)
+2.   unset TMPDIR (run this command immediately after installation)
+3.   mysql_install_db --verbose --user=/`whoami/` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp (allows you to actually use mysql with your user account)
+4.   /usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here' (sets new root password for mysql on your system)
+5.   /usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password' (finishes setting up mysql new root password)
+6.   /usr/local/opt/mysql/bin/mysql_secure_installation (allows for production server-level installation)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
