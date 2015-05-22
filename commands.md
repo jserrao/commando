@@ -184,8 +184,9 @@
 5.   /usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password' (finishes setting up mysql new root password)
 6.   /usr/local/opt/mysql/bin/mysql_secure_installation (allows for production server-level installation)
 7.   mysqladmin (command to do just about everything with mysql)
-8.   mysqld (starts mysql server)
+8.   mysqld (starts mysql server, but not really a lot of times)
 9.   mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
+10.   mysql -u root -p (opens up a new kind of terminal command prompt, specific to mysql (another layer of hell for you to wander through)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
