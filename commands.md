@@ -186,7 +186,12 @@
 7.   mysqladmin (command to do just about everything with mysql)
 8.   mysqld (starts mysql server, but not really a lot of times)
 9.   mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
-10.   mysql -u root -p (opens up a new kind of terminal command prompt, specific to mysql (another layer of hell for you to wander through)
+10.   mysql -u root -p (opens up a new kind of terminal command prompt, specific to mysql - will prompt for password (another layer of hell for you to wander through)
+11.   mysql> CREATE DATABASE your-database-name-here; (at the mysql prompt, this will create your database AFTER you have connected in the step above, don't forget the semicolon)
+12.   mysql> CREATE USER 'new-user-here'@'localhost' IDENTIFIED BY 'your-password-here'; (establishes new user in the DB)
+13.   mysql> GRANT ALL PRIVILEGES ON * . * TO 'new-user-here'@'localhost'; (gives all sql privledges to your new user)
+14.   mysql> FLUSH PRIVILEGES; (resets db to accept new user)
+15.   mysql> quit; (lets you leave the mysql specific prompt)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
