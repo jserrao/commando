@@ -62,7 +62,7 @@
 60.    pbcopy < ~/.ssh/id_rsa.pub (copies something to your clipboard, so you can paste it like a human being - only in OSX. This example copies your SSH key.)
 61.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
 62.    /etc (is a symlink to /private/etc - Mac OSX sets this up natively)
-63.
+63.    /private/etc/apache2/httpd.conf (where the Mac OSX native apache files live)
 64.
 65.
 66.
