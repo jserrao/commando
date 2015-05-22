@@ -61,7 +61,7 @@
 59.	   sudo chown your-user-name-here /usr/local/your/root/path/here (changes ownership of various files via CLI)
 60.    pbcopy < ~/.ssh/id_rsa.pub (copies something to your clipboard, so you can paste it like a human being - only in OSX. This example copies your SSH key.)
 61.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
-62.
+62.    /etc (is a symlink to /private/etc - Mac OSX sets this up natively)
 63.
 64.
 65.
@@ -98,8 +98,10 @@
 09.     bower install your-js-package-here --save (adds your package into bower.json dependency list)    	
 10.		npm install -g yo generator-wordpress (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
 11.		npm install -g http-server (adds a local server you can just spin up)
-12.		http-server /your/path/here (starts up at localhost:8080 that points at whatever path you tell it)
+12.		http-server /your/path/here (starts up at localhost:8080 that points at whatever path you tell it, simple server)
 13.		http-server /your/path/here -p 5000 (starts up at localhost:5000, different path declaration)
+14.		apachectl start (starts http server at http://localhost)
+15.		apachectl stop (stops http server at http://localhost)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
