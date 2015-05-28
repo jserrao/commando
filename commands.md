@@ -158,6 +158,7 @@
 49.   git config --global core.excludesfile ~/.gitignore_global (will permanently ignore .DS_Store files in OSX)
 50.   git checkout --track origin/your-branch-here (pulls in new remote branch to your local repo)
 51.   git remote rename old-repo-here new-repo-here (renames your remote repo)
+52.   git stash apply (puts uncommitted changes back onto current branch from stash)
 
 
 ## Heroku (Salesforce app cloud)
