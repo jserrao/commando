@@ -159,6 +159,8 @@
 50.   git checkout --track origin/your-branch-here (pulls in new remote branch to your local repo)
 51.   git remote rename old-repo-here new-repo-here (renames your remote repo)
 52.   git stash apply (puts uncommitted changes back onto current branch from stash)
+53.   git fetch (pull all code off remote and puts it into a local cache, updates synced local branches)
+54.   git branch --track branch-name origin/branch-name (if you don't have local branches synced with remotes, you can now sync them with this baby)
 
 
 ## Heroku (Salesforce app cloud)
