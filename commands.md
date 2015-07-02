@@ -63,7 +63,7 @@
 61.    cat - concatenate the key (for example, cat ~/.ssh/id_rsa.pub ), prints my ssh key
 62.    /etc (is a symlink to /private/etc - Mac OSX sets this up natively)
 63.    /private/etc/apache2/httpd.conf (where the Mac OSX native apache files live)
-64.
+64.    wget -mirror $url (replicates site in your local folder - whichever folder you run the command from)
 65.
 66.
 67.
