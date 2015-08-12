@@ -64,9 +64,9 @@
 62.    /etc (is a symlink to /private/etc - Mac OSX sets this up natively)
 63.    /private/etc/apache2/httpd.conf (where the Mac OSX native apache files live)
 64.    wget -mirror $url (replicates site in your local folder - whichever folder you run the command from)
-65.
-66.
-67.
+65.    gpasswd -a username-here sudo (adds a user to sudo group, must be `root`)
+66.    adduser username (adds user to ubuntu)
+67.    su - username (switches user to username)
 68.    ssh root@192.###.###.### (gives you shell access to a server, will prompt for shell password)
 69.    <Return> ~ . (kills an open ssh session) 
 70.    service mysqld start (starts up the mysql server, assumes mysql is installed on the box)
