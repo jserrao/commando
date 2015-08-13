@@ -83,6 +83,7 @@
 81.    /var/www/html or /usr/local/apache/htdocs (This is where your website should/could live on a linux server. Paths are from the root)
 82.    cd "Foldername with a Space" (must use quotes to espace space characters on the command line)
 83.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
+84.    ls -a (shows list of files in your directory, including hidden dot files)
 
 
 ## Front-end Tooling
