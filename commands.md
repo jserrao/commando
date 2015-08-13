@@ -198,6 +198,8 @@
 13.   mysql> GRANT ALL PRIVILEGES ON * . * TO 'new-user-here'@'localhost'; (gives all sql privledges to your new user)
 14.   mysql> FLUSH PRIVILEGES; (resets db to accept new user)
 15.   mysql> quit; (lets you leave the mysql specific prompt)
+16.   mysql> USE database-name-here; (chooses a database to manipulate)
+17.   mysql> mysql -u root -p database-name < database-to-be-imported.sql; (imports existing mysql DB into mysql itself - note that you must run this command from the folder you are in or change the last part of the command into an actual path)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
