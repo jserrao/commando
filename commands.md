@@ -259,4 +259,8 @@
 10.    G (end of line, go into insert mode)
 11.    escape (exits you from editing content mode)
 12.    :e (new file)
+13.    shift + v (selects text - you cant do this while in INSERT mode)
+14.    d (cut highlighted text)
+15.    P (paste before cursor)
+16.    p (paste after cursor)
 
