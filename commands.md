@@ -103,6 +103,7 @@
 13.		http-server /your/path/here -p 5000 (starts up at localhost:5000, different path declaration)
 14.		apachectl start (starts http server at http://localhost)
 15.		apachectl stop (stops http server at http://localhost)
+16.		apachectl restart (restarts your server)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
