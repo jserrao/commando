@@ -104,6 +104,9 @@
 14.		apachectl start (starts http server at http://localhost)
 15.		apachectl stop (stops http server at http://localhost)
 16.		apachectl restart (restarts your server)
+17.		sudo easy_install pip (installs pip, package manager for python)
+18.		sudo pip install ansible (uses pip to install ansible)
+19.		sudo pip install ansible --upgrade (pip to update ansible)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
