@@ -265,4 +265,6 @@
 15.    P (paste before cursor)
 16.    p (paste after cursor)
 17.    /your-string (allows you to search for a string)
+18.    CTRL + f (page down)
+19.    CTRL + b (page up)
 
