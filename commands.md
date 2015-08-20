@@ -264,4 +264,5 @@
 14.    d (cut highlighted text)
 15.    P (paste before cursor)
 16.    p (paste after cursor)
+17.    /your-string (allows you to search for a string)
 
