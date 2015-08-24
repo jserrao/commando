@@ -247,6 +247,9 @@
 13.    sudo a2enmod rewrite (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
 14.    /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso (path for virtual box guest additions if you are running an Ubuntu dev machine from OSX)
 15.    CNTL+H in file browser (shows hidden files in Ubuntu)
+16.    sudo ufw allow 80/tcp (adds typical port 80 to allowable ports list on ufw, which is ubuntu firewall)
+17.    sudo ufw show added (shows which ports you have allowed on ufw)
+18.    sudo ufw enable (enables ufw)
 
 
 ## Vim (an annoying text editor)
