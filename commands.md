@@ -250,6 +250,11 @@
 16.    sudo ufw allow 80/tcp (adds typical port 80 to allowable ports list on ufw, which is ubuntu firewall)
 17.    sudo ufw show added (shows which ports you have allowed on ufw)
 18.    sudo ufw enable (enables ufw)
+19.    sudo fallocate -l 4G /swapfile (creates 4G swapfile)
+20.    sudo chmod 600 /swapfile (puts proper permissions on the swapfile directory so the world cant see it)
+21.    sudo mkswap /swapfile (format the folder for swap usage)
+22.    sudo swapon /swapfile (enable swapfile)
+23.    sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab' (makes ubuntu server automatically load it's swap file on restart)
 
 
 ## Vim (an annoying text editor)
