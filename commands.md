@@ -107,6 +107,9 @@
 17.		sudo easy_install pip (installs pip, package manager for python)
 18.		sudo pip install ansible (uses pip to install ansible)
 19.		sudo pip install ansible --upgrade (pip to update ansible)
+20.		vagrant up (turns on your vagrant instance - must be in directory with vagrantfile)
+21.		vagrant down (turns off your vagrant instance - must be in a directory with vagrant file)
+22.		vagrant ssh (ssh's you into your vagrant instance)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
