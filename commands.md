@@ -169,12 +169,16 @@
 52.   git stash apply (puts uncommitted changes back onto current branch from stash)
 53.   git fetch (pull all code off remote and puts it into a local cache, updates synced local branches)
 54.   git branch --track branch-name origin/branch-name (if you don't have local branches synced with remotes, you can now sync them with this baby)
-55.   git submodule update --remote --merge (supposedly updates all submodules from .gitmodules, I have my doubts)
+Submodule stuff
+55a.   git submodule update --remote (supposedly updates all submodules from .gitmodules, I have my doubts)
+55b.   git add .
+55c.   git commit -m "Updated submodule"
 
 
 ## Heroku (Salesforce app cloud)
 00.    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
 01.    heroku login (will log you into your apps, prompts heroku info)
+2.     git push heroku-test next-release:master (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
 
 
 ## Homebrew (package manager for Mac)
