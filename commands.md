@@ -85,6 +85,11 @@
 83.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
 84.    ls -a (shows list of files in your directory, including hidden dot files)
 
+## AWS CLI
+01.    curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" (downloads AWS bundle, requires python and pip)
+2.     unzip awscli-bundle.zip (unzips AWS)
+03.    sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws (installs bundle)
+
 
 ## Front-end Tooling
 
