@@ -117,6 +117,7 @@
 20.		vagrant up (turns on your vagrant instance - must be in directory with vagrantfile)
 21.		vagrant down (turns off your vagrant instance - must be in a directory with vagrant file)
 22.		vagrant ssh (ssh's you into your vagrant instance)
+23.		openssl req -x509 -newkey rsa:2048 -keyout key.pem -out req.pem (generates a self-signed root certificate)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
