@@ -89,6 +89,8 @@
 01.    curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" (downloads AWS bundle, requires python and pip)
 2.     unzip awscli-bundle.zip (unzips AWS)
 03.    sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws (installs bundle)
+4.     aws configure --profile user (sets up access key ID, secret access key, aws region and output format defaults for using AWS CLI)
+5.     aws ec2 describe-instances --profile user-name (shows you config profile for a given user on a given AWS service, ec2 in this example)
 
 
 ## Front-end Tooling
