@@ -177,10 +177,9 @@
 52.   git stash apply (puts uncommitted changes back onto current branch from stash)
 53.   git fetch (pull all code off remote and puts it into a local cache, updates synced local branches)
 54.   git branch --track branch-name origin/branch-name (if you don't have local branches synced with remotes, you can now sync them with this baby)
-Submodule stuff
-55a.   git submodule update --remote (supposedly updates all submodules from .gitmodules, I have my doubts)
-55b.   git add .
-55c.   git commit -m "Updated submodule"
+55.   git submodule update --remote (supposedly updates all submodules from .gitmodules, I have my doubts)
+56.   git add .
+57.   git commit -m "Updated submodule"
 
 
 ## Heroku (Salesforce app cloud)
