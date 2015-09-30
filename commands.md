@@ -84,6 +84,15 @@
 82.    cd "Foldername with a Space" (must use quotes to espace space characters on the command line)
 83.    cd volumes (access remote drives - if already mounted, they will be at volumes/drive-name-nere)
 84.    ls -a (shows list of files in your directory, including hidden dot files)
+85.    openssl req -new -newkey rsa:2048 -nodes -out star_example_com.csr -keyout star_example_com.pem -subj "/C=country-code-here/ST=state-code-here/L=city-here/O=organization-here/OU=organization-dept-here/CN=*.example.com/emailAddress=team@example.com" (openssl command to generate a self-signed certificate and private key, note the CN part of command must match the type of SSL cert you need, single or multi-domain)
+86.    sudo easy_install pip (installs pip, package manager for python)
+
+## Ansible / Vagrant
+1.		sudo pip install ansible (uses pip to install ansible)
+2.		sudo pip install ansible --upgrade (pip to update ansible)
+3.		vagrant up (turns on your vagrant instance - must be in directory with vagrantfile)
+4.		vagrant down (turns off your vagrant instance - must be in a directory with vagrant file)
+5.		vagrant ssh (ssh's you into your vagrant instance)
 
 ## AWS CLI
 01.    curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" (downloads AWS bundle, requires python and pip)
@@ -94,7 +103,6 @@
 6.     aws iam upload-server-certificate --server-certificate-name STAR_example_com --certificate-body file://STAR_example_com.crt --private-key file://star_example_com.pem --certificate-chain file://ca-chain-amazon.crt --path /cloudfront/*/ (uploads an SSL certificate to AWS IAM service)
 7.     aws iam update-server-certificate (updates AWS IAM SSL certificates)
 8.     aws iam get-server-certificate --server-certificate-name STAR_example_com (gets you the details of a current SSL certificate)
-
 
 ## Front-end Tooling
 
@@ -114,13 +122,6 @@
 14.		apachectl start (starts http server at http://localhost)
 15.		apachectl stop (stops http server at http://localhost)
 16.		apachectl restart (restarts your server)
-17.		sudo easy_install pip (installs pip, package manager for python)
-18.		sudo pip install ansible (uses pip to install ansible)
-19.		sudo pip install ansible --upgrade (pip to update ansible)
-20.		vagrant up (turns on your vagrant instance - must be in directory with vagrantfile)
-21.		vagrant down (turns off your vagrant instance - must be in a directory with vagrant file)
-22.		vagrant ssh (ssh's you into your vagrant instance)
-23.		openssl req -x509 -newkey rsa:2048 -keyout key.pem -out req.pem (generates a self-signed root certificate)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
