@@ -184,6 +184,7 @@
 55.   git submodule update --remote (supposedly updates all submodules from .gitmodules, I have my doubts)
 56.   git add .
 57.   git commit -m "Updated submodule"
+58.   git push origin tag-name-here (how to push tags to remote - they don't go with your code)
 
 
 ## Heroku (Salesforce app cloud)
