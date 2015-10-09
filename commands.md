@@ -193,6 +193,7 @@
 2.     git push heroku-test next-release:master (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
 3.     heroku certs:update --app app-name STAR_example_com.crt private.pem (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
 4.     heroku git:remote -a your-environment-name-here -r custom-environment-name-here (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
+5.     heroku restart -a app_name (restarts your app dyno, very quickly)
 
 
 ## Homebrew (package manager for Mac)
