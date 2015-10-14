@@ -86,6 +86,8 @@
 84.    ls -a (shows list of files in your directory, including hidden dot files)
 85.    openssl req -new -newkey rsa:2048 -nodes -out star_example_com.csr -keyout star_example_com.pem -subj "/C=country-code-here/ST=state-code-here/L=city-here/O=organization-here/OU=organization-dept-here/CN=*.example.com/emailAddress=team@example.com" (openssl command to generate a self-signed certificate and private key, note the CN part of command must match the type of SSL cert you need, single or multi-domain)
 86.    sudo easy_install pip (installs pip, package manager for python)
+87.    alias custom-name-here="cd /Users/you/some/path/here" (structure for making an aliased path, must be saved into OSX user's .profile file or it will not persist beyond current session)
+88.    ls -a (shows all files, including hidden ones)
 
 ## Ansible / Vagrant
 1.		sudo pip install ansible (uses pip to install ansible)
