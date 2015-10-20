@@ -238,6 +238,10 @@
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
 02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
 03.    mongod (starts the mongo server from CLI)
+4.     mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here local-db-folder-path (restores DB backup to a mongo server - assumes mongo is installed on destination server)
+5.     mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here --drop local-db-folder-path (Before restoring the collections from the dumped backup, drops the collections from the target database. --drop does not drop collections that are not in the backup.When the restore includes the admin database, mongorestore with --drop removes all user credentials and replaces them with the users defined in the dump file)
+6.     mongodump -h example.dbserver.here:port -d db-name -u dbuser-here -p password-here -o output-folder-here (exports DB to a destination folder - note that mongo does not output a single SQL-like file but a folder of .json and .bson files)
+7.     mongodb://db-user-here:db-password-here@example.db.server.com:port,example2.db.server.com:port/dbname-here (mongo URI to connect cloud instances - like mongolab > heroku)
 
 
 ## Transferring things (SFTP, SCP, rsync)
