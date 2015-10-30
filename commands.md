@@ -245,6 +245,9 @@
 5.     mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here --drop local-db-folder-path (Before restoring the collections from the dumped backup, drops the collections from the target database. --drop does not drop collections that are not in the backup.When the restore includes the admin database, mongorestore with --drop removes all user credentials and replaces them with the users defined in the dump file)
 6.     mongodump -h example.dbserver.here:port -d db-name -u dbuser-here -p password-here -o output-folder-here (exports DB to a destination folder - note that mongo does not output a single SQL-like file but a folder of .json and .bson files)
 7.     mongodb://db-user-here:db-password-here@example.db.server.com:port,example2.db.server.com:port/dbname-here (mongo URI to connect cloud instances - like mongolab > heroku)
+8.     mongo --eval (gives you ability to insert any mongo query)
+9.     mongo --eval 'db.getUsers()' (tells you who is in the DB)
+10.    mongo --eval 'db.createUser({user: "admin", pwd: "password", roles: [ { role: "readWrite", db: "db-name-here" }]})' (assigns user with read/write privledges to db)
 
 
 ## Transferring things (SFTP, SCP, rsync)
