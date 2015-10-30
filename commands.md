@@ -186,7 +186,7 @@
 55.   git submodule update --remote (supposedly updates all submodules from .gitmodules, I have my doubts)
 56.   git add .
 57.   git commit -m "Updated submodule"
-58.   git push origin tag-name-here (how to push tags to remote - they don't go with your code)
+58.   git push --follow-tags (how to push tags to remote - they don't go with your code)
 59.   git fetch origin (grabs all the stuff on your remote that isn't in your repo, puts it into a cache of sorts)
 60.   git checkout xyz (creates tracking branch for whatever you fetched)
 61.   git branch --unset-upstream (remove tracking branch's link to remote branch)
