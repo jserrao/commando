@@ -248,6 +248,8 @@
 8.     mongo --eval (gives you ability to insert any mongo query)
 9.     mongo --eval 'db.getUsers()' (tells you who is in the DB)
 10.    mongo --eval 'db.createUser({user: "admin", pwd: "password", roles: [ { role: "readWrite", db: "db-name-here" }]})' (assigns user with read/write privledges to db)
+11.    mongo --eval 'db.getUser("admin")' (send string of whomever you want to find, tells you about them)
+12.    mongo --eval 'db.getCollectionNames()' (gives you a list of all the collections (aka tables) in your DB)
 
 
 ## Transferring things (SFTP, SCP, rsync)
