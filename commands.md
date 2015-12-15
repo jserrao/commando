@@ -190,6 +190,7 @@
 59.   git fetch origin (grabs all the stuff on your remote that isn't in your repo, puts it into a cache of sorts)
 60.   git checkout xyz (creates tracking branch for whatever you fetched)
 61.   git branch --unset-upstream (remove tracking branch's link to remote branch)
+62.   git rm --cached myfile.log (removes file from repo cache, which is usually why you see .gitignore failures)
 
 
 ## Heroku (Salesforce app cloud)
