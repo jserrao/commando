@@ -8,7 +8,7 @@
 6.    rm your-filename-here (remove filename (BE CAREFUL!)
 7.    rmdir - remove directory, if empty
 8.    rm -rf directory/xyz (removes whole directory with stuff in it)
-9.    *.php (removes all files of that type in one directory)
+9.    rm *.php (removes all files of that type in one directory)
 10.    man your--program-here (shows you manual for that part)
 11.    cd .. (jumps you back a directory)
 12.    cd ../.. (jumps you back two directories)
