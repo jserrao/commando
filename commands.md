@@ -251,6 +251,7 @@
 10.    mongo --eval 'db.createUser({user: "admin", pwd: "password", roles: [ { role: "readWrite", db: "db-name-here" }]})' (assigns user with read/write privledges to db)
 11.    mongo --eval 'db.getUser("admin")' (send string of whomever you want to find, tells you about them)
 12.    mongo --eval 'db.getCollectionNames()' (gives you a list of all the collections (aka tables) in your DB)
+13.    mongo asdf######.mongolab.com:#####/dbname -u dbuser -p dbpassword (connect to remote mongo instance on mongolab)
 
 
 ## Transferring things (SFTP, SCP, rsync)
