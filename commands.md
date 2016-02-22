@@ -212,7 +212,8 @@
 05.    brew prune (removes dead symlinks)
 06.    brew [whatever] --dry-run (tells you whats going to happen before you do it)
 07.    brew install your-package-here (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
-08.    usr/local/Cellar (where Homebrew installs stuff)
+08.    /usr/local/Cellar (where Homebrew installs stuff)
+09.    /usr/local/var/your-program-here (another place Homebrew apparently installs stuff)
 09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
 10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff if you use Homebrew)
 
