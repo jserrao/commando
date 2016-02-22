@@ -253,6 +253,7 @@
 11.    mongo --eval 'db.getUser("admin")' (send string of whomever you want to find, tells you about them)
 12.    mongo --eval 'db.getCollectionNames()' (gives you a list of all the collections (aka tables) in your DB)
 13.    mongo asdf######.mongolab.com:#####/dbname -u dbuser -p dbpassword (connect to remote mongo instance on mongolab)
+14.    /usr/local/cellar/mongodb/3.0.3/bin (where you'll find the core mongo files if you install mongodb via homebrew on OSX - also remember this is where you have to run mongolab connection requests from for whatever reason)
 
 
 ## Transferring things (SFTP, SCP, rsync)
