@@ -250,6 +250,8 @@
 08.    mongo --eval (gives you ability to insert any mongo query but you dont always need it)
 09.    mongo asdf######.mongolab.com:#####/dbname -u dbuser -p dbpassword (connect to remote mongo instance on mongolab)
 10.    /usr/local/cellar/mongodb/3.0.3/bin (where you'll find the core mongo files if you install mongodb via homebrew on OSX - also remember this is where you have to run mongolab connection requests from for whatever reason)
+11.    mongodb://user-name:password@ds123456-a.mongolab.com:27799/db_name_here (URI string for a mongoDB)
+
 
 ## Mongo Commands
 #### very useful (https://docs.mongodb.org/manual/tutorial/write-scripts-for-the-mongo-shell/)
