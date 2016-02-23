@@ -260,7 +260,7 @@
 03.    > db.getUser("admin") (send string of whomever you want to find, tells you about them)
 04.    > db.getCollectionNames() (gives you a list of all the collections (aka tables) in your DB)
 05.    > db.getUsers() (gives you a list of all the users)
-
+06.    > db.collection.update({ "key" : "old-value" },{ $set: { "key" : "new-value" }},{ multi : true }) (sets a new value for all records that match key/old-value pair
 
 
 ## Transferring things (SFTP, SCP, rsync)
