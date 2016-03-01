@@ -191,6 +191,7 @@
 60.   git checkout xyz (creates tracking branch for whatever you fetched)
 61.   git branch --unset-upstream (remove tracking branch's link to remote branch)
 62.   git rm --cached myfile.log (removes file from repo cache, which is usually why you see .gitignore failures)
+63.   git rev-list --count branch-name-here (shows you how many commits are in a given branch)
 
 
 ## Heroku (Salesforce app cloud)
