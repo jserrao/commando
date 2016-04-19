@@ -264,6 +264,13 @@
 06.    > db.collection.update({ "key" : "old-value" },{ $set: { "key" : "new-value" }},{ multi : true }) (sets a new value for all records that match key/old-value pair
 
 
+## PIP (Python install tool)
+01.    sudo easy_install pip (this should work on OSX, I needed sudo but maybe you don't?)
+02.    sudo pip install --upgrade pip (upgrades pip)
+03.    sudo pip list (shows the packages you have installed)
+04.    sudo pip show ansible (shows current status on a given package, 'ansible' in this case)
+
+
 ## Transferring things (SFTP, SCP, rsync)
 
 ### SCP
