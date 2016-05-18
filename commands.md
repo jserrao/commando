@@ -95,6 +95,9 @@
 3.		vagrant up (turns on your vagrant instance - must be in directory with vagrantfile)
 4.		vagrant down (turns off your vagrant instance - must be in a directory with vagrant file)
 5.		vagrant ssh (ssh's you into your vagrant instance)
+6.		ansible-vault encrypt .your-file-here (uses ansible-vault to encrypt a file with passwords)
+7.		ansible-vault view .your-file-here (uses ansible-vault to view an encrypted pw file)
+8.		ansible-vault edit .your-file-here (allows you to edit a vault pw file)
 
 ## AWS CLI
 01.    curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip" (downloads AWS bundle, requires python and pip)
