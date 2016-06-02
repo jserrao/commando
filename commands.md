@@ -243,6 +243,11 @@
 19.   mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION; (gives new user sudo powers)
 20.   mysql> SHOW GRANTS FOR 'user'@'localhost'; (shows you what your new user can do)
 
+## Kalabox
+01.   kbox (hello world more or less)
+2.    kbox config (shows you version of kalabox)
+3.    kbox git checkout -b new-branch -- -v (would create / checkout new git branch. NOTE the `--` that allows you talk to kalabox, making the `kbox` command a wrapper on the CLI)
+
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
 02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
