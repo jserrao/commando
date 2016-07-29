@@ -221,6 +221,14 @@
 09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
 10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff if you use Homebrew)
 
+## Kalabox
+01.   kbox (hello world more or less)
+2.    kbox config (shows you version of kalabox)
+3.    kbox git checkout -b new-branch -- -v (would create / checkout new git branch. NOTE the `--` that allows you talk to kalabox, making the `kbox` command a wrapper on the CLI)
+4.    kbox status (tells you if the docker engine is up/down)
+5.    kbox up (takes docker engine online)
+6.    kbox down (takes docker engine offline, good for resets)
+
 ## MySQL Server (assumes use of homebrew)
 1.   brew install mysql (starts mysql package installation via homebrew)
 2.   unset TMPDIR (run this command immediately after installation)
@@ -242,11 +250,6 @@
 18.   mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password-here'; (creates a user with pw on localhost)
 19.   mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION; (gives new user sudo powers)
 20.   mysql> SHOW GRANTS FOR 'user'@'localhost'; (shows you what your new user can do)
-
-## Kalabox
-01.   kbox (hello world more or less)
-2.    kbox config (shows you version of kalabox)
-3.    kbox git checkout -b new-branch -- -v (would create / checkout new git branch. NOTE the `--` that allows you talk to kalabox, making the `kbox` command a wrapper on the CLI)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
