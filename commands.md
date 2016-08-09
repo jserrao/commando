@@ -195,6 +195,7 @@
 61.   git branch --unset-upstream (remove tracking branch's link to remote branch)
 62.   git rm --cached myfile.log (removes file from repo cache, which is usually why you see .gitignore failures)
 63.   git rev-list --count branch-name-here (shows you how many commits are in a given branch)
+64.   git push -f <remote> <branch> (forces an overrite of remote with your branch, BE CAREFUL)
 
 
 ## Heroku (Salesforce app cloud)
