@@ -231,6 +231,8 @@
 4.    kbox status (tells you if the docker engine is up/down)
 5.    kbox up (takes docker engine online)
 6.    kbox down (takes docker engine offline, good for resets)
+7.    kbox push (moves local code + db onto pantheon, slick - it will ask via prompts)
+8.    kbox pull (take code + db from pantheon - it will also ask via prompts)
 
 ## MySQL Server (assumes use of homebrew)
 1.   brew install mysql (starts mysql package installation via homebrew)
