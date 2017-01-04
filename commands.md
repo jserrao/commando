@@ -197,7 +197,7 @@
 63.   git rev-list --count branch-name-here (shows you how many commits are in a given branch)
 64.   git push -f <remote> <branch> (forces an overrite of remote with your branch, BE CAREFUL)
 65.   git rm -r --cached myFolder (removes files from git repo but not filesystem - so they are there just not tracked. To me this implies that you should also be added whatever folder removed with this method into your .gitignore file).
-66.   
+66.   git remote rename your-old-name-here your-new-name-here (rename remote)
 
 
 ## Heroku (Salesforce app cloud)
