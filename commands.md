@@ -88,6 +88,7 @@
 86.    sudo easy_install pip (installs pip, package manager for python)
 87.    alias custom-name-here="cd /Users/you/some/path/here" (structure for making an aliased path, must be saved into OSX user's .profile file or it will not persist beyond current session)
 88.    ls -a (shows all files, including hidden ones)
+89.    curl -I https://your-url-here.whatever (gives you the HTTP headers for a given request)
 
 ## Ansible / Vagrant
 1.		sudo pip install ansible (uses pip to install ansible)
