@@ -122,12 +122,12 @@
 08.    bower install your-JS-package-here (adds a JS dependency to the project in your folder, works in conjunction with Yeoman)
 09.    bower install your-js-package-here --save (adds your package into bower.json dependency list)    	
 10.    npm install -g yo generator-wordpress (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
-11.		npm install -g http-server (adds a local server you can just spin up)
-12.		http-server /your/path/here (starts up at localhost:8080 that points at whatever path you tell it, simple server)
-13.		http-server /your/path/here -p 5000 (starts up at localhost:5000, different path declaration)
-14.		apachectl start (starts http server at http://localhost)
-15.		apachectl stop (stops http server at http://localhost)
-16.		apachectl restart (restarts your server)
+11.    npm install -g http-server (adds a local server you can just spin up)
+12.    http-server /your/path/here (starts up at localhost:8080 that points at whatever path you tell it, simple server)
+13.    http-server /your/path/here -p 5000 (starts up at localhost:5000, different path declaration)
+14.    apachectl start (starts http server at http://localhost)
+15.    apachectl stop (stops http server at http://localhost)
+16.    apachectl restart (restarts your server)
 
 
 ## GIT! (super useful to do this on the command line versus GUI)
