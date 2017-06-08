@@ -1,9 +1,9 @@
 ## Basics of the CLI (command line interface for n00bs)
 
-1.    DONT DO THIS: rm -rf / (this means delete everything)
-2.    ssh webadmin@1.2.3.4 (gets you into a server)
-3.    mkdir hello (make a directory called hello)
-4.    cd hello (changes your directory to hello, assumes it has been created)
+1.    DONT DO THIS: `rm -rf /` (this means delete everything)
+2.    `ssh webadmin@1.2.3.4` (gets you into a server)
+3.    `mkdir hello` (make a directory called hello)
+4.    `cd hello` (changes your directory to hello, assumes it has been created)
 5.    pwd (prints path)
 6.    rm your-filename-here (remove filename (BE CAREFUL!)
 7.    rmdir - remove directory, if empty
@@ -204,10 +204,10 @@
 ## Heroku (Salesforce app cloud)
 00.    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
 01.    heroku login (will log you into your apps, prompts heroku info)
-2.     git push heroku-test next-release:master (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
-3.     heroku certs:update --app app-name STAR_example_com.crt private.pem (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
-4.     heroku git:remote -a your-environment-name-here -r custom-environment-name-here (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
-5.     heroku restart -a app_name (restarts your app dyno, very quickly)
+2.    git push heroku-test next-release:master (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
+3.    heroku certs:update --app app-name STAR_example_com.crt private.pem (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
+4.    heroku git:remote -a your-environment-name-here -r custom-environment-name-here (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
+5.    heroku restart -a app_name (restarts your app dyno, very quickly)
 
 
 ## Homebrew (package manager for Mac)
