@@ -27,7 +27,7 @@
 25.    ~/ (Shortcut to go home directory of a given user)
 26.    Control + C (kills the process on the command line)
 27.    Command + K (OSX clears Bash cache)
-28.    Control + L (clears the terminal window) 
+28.    Control + L (clears the terminal window)
 29.    gzip PATH-HERE - gzips a file for you, which is what phpmyadmin seems to like
 30.    mysql -uUSERNAME -pPASSWORD DATABASENAME < MYDATABASE.sql (imports a DB)
 31.    host your-domain-here (shows you how the DNS resolves)
@@ -42,7 +42,7 @@
 40.    scutil --get HostName (prints your computer's hostname - OSX)
 41.    scutil --set HostName your-name-hostname-here (changes your computer's hostname - OSX)
 42.    hostname (prints your computer's hostname - Linux)
-43.    clear (erases output in terminal window) 
+43.    clear (erases output in terminal window)
 44.    sudo smbpasswd -a your-name-here (changes your samba password for file transfer between OSes, good for virtual machines)
 45.    sudo service smbd restart (restarts samba)
 46.    rvm --default use 2.0.0 (forces Mac OSX to permanently use a newer version of Ruby)
@@ -68,7 +68,7 @@
 66.    adduser username (adds user to ubuntu)
 67.    su - username (switches user to username)
 68.    ssh root@192.###.###.### (gives you shell access to a server, will prompt for shell password)
-69.    <Return> ~ . (kills an open ssh session) 
+69.    <Return> ~ . (kills an open ssh session)
 70.    service mysqld start (starts up the mysql server, assumes mysql is installed on the box)
 71.    ls (spits out list of directory view)
 72.    scp -r /Users/username-here/desktop/source ssh-username-here@ftp.domain.com:/home/user/public_html/dir/destination (scp securely copies a directory from one place to another - the directory on the left is the SOURCE, the right is the DESTINATION)
@@ -173,14 +173,14 @@
 38.   git remote -v (shows you all of your remotes)
 39.   git stash clear (deletes everything off of stash)
 40.   git merge branch-name-here (will merge branch-name-here with whatever branch you are on, do 'git pull' on your branch and make sure it's up to date with origin before merging!)
-41.   git reset --hard \[hash\] (resets git to a given commit in the past on your branch) 
+41.   git reset --hard \[hash\] (resets git to a given commit in the past on your branch)
 42.   git branch -v (shows all branches, active one has '*' next to its name)
 43.   git log -n 5 --author=your-name-here (shows the last 5 commits from a given author)
 44.   git reset (undoes whatever you staged, all of it)
 45.   git push origin --delete your-branch-here (deletes remote branches)
 46.   git branch -D your-branch-here (deletes local branches, overrides conflicts)
 47.   git branch -d your-branch-here (deleter local branches, will stop if uncommited changes are on branch)
-48.   echo .DS_Store > ~/.gitignore_global (creates a global .gitignore_global file to store files you never want in your repo) 
+48.   echo .DS_Store > ~/.gitignore_global (creates a global .gitignore_global file to store files you never want in your repo)
 49.   git config --global core.excludesfile ~/.gitignore_global (will permanently ignore .DS_Store files in OSX)
 50.   git checkout --track origin/your-branch-here (pulls in new remote branch to your local repo)
 51.   git remote rename old-repo-here new-repo-here (renames your remote repo)
@@ -199,6 +199,7 @@
 64.   git push -f <remote> <branch> (forces an overrite of remote with your branch, BE CAREFUL)
 65.   git rm -r --cached myFolder (removes files from git repo but not filesystem - so they are there just not tracked. To me this implies that you should also be added whatever folder removed with this method into your .gitignore file).
 66.   git remote rename your-old-name-here your-new-name-here (rename remote)
+67.   curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}' (Using GitHub API v3 to create a repo from terminal without using web interface. Then 'git remote add')
 
 
 ## Heroku (Salesforce app cloud)
@@ -364,4 +365,3 @@
 17.    /your-string (allows you to search for a string)
 18.    CTRL + f (page down)
 19.    CTRL + b (page up)
-
