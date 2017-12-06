@@ -236,6 +236,7 @@
 07.   `lando push` (moves local code to pantheon, slick - it will ask via prompts)
 08.   `lando pull` (take code from dev it will also ask via prompts)
 09.   `lando pull --database=dev --files=dev` (pulls code, DB and files from Pantheon to your local)
+10.   `lando switch your-multidev-branch` (switches code and DB over to pantheon multidev branch)
 
 ## MySQL Server (assumes use of homebrew)
 1.   brew install mysql (starts mysql package installation via homebrew)
@@ -290,12 +291,13 @@
 04.    sudo pip show ansible (shows current status on a given package, 'ansible' in this case)
 
 ## Terminus (Pantheon CLI)
-01.   terminus auth login your@email.com (authorizes your machine into pantheon - you need to create a machine token on pantheon.io before this will work)
-2.    terminus sites create --upsteam=#### --site=site-name --label="Something good" --org=your-org-id (will give you a CLI walkthrough to install an instance on pantheon infrastruture)
-3.    terminus site dashboard --site=yoursitename (automatically bounces you out to the pantheon dashboard GUI)
-4.    \`terminus site connection-info --site=yoursitehere --env=dev --field=git_command\` (makes local git repo, NOTE backticks to get this to work)
-5.    terminus wp 'core install --url --url=http://dev-example.pantheonsite.io --title="Name of site" --admin_user=admin --admin_password=somethinggood --admin_email="your@email.com"' (sets up a wordpress site - not really sure why you wouldnt just use their one button installer but hey, there is a command if you want to make your life harder)
-6.    terminus wp 'plugin install plugin-slug-from-wordpress.com --activate' (installs plugin but will ask you for Pantheon admin pw for the site)
+01.   `terminus auth login your@email.com` (authorizes your machine into pantheon - you need to create a machine token on pantheon.io before this will work)
+2.    `terminus sites create --upsteam=#### --site=site-name --label="Something good" --org=your-org-id` (will give you a CLI walkthrough to install an instance on pantheon infrastruture)
+3.    `terminus site dashboard --site=yoursitename` (automatically bounces you out to the pantheon dashboard GUI)
+4.    `terminus site connection-info --site=yoursitehere --env=dev --field=git_command\` (makes local git repo, NOTE backticks to get this to work)
+5.    `terminus wp 'core install --url --url=http://dev-example.pantheonsite.io --title="Name of site" --admin_user=admin --admin_password=somethinggood --admin_email="your@email.com"'` (sets up a wordpress site - not really sure why you wouldnt just use their one button installer but hey, there is a command if you want to make your life harder)
+6.    `terminus wp 'plugin install plugin-slug-from-wordpress.com --activate'` (installs plugin but will ask you for Pantheon admin pw for the site)
+7.    `terminus build:project:create github-repo-owner/github-repo-name YOUR-SITE-HERE` (builds a Wordpress / Drupal based site on Pantheon)
 
 
 ## Transferring things (SFTP, SCP, rsync)
