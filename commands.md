@@ -204,30 +204,30 @@
 
 
 ## Heroku (Salesforce app cloud)
-00.    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
-01.    heroku login (will log you into your apps, prompts heroku info)
-2.    git push heroku-test next-release:master (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
-3.    heroku certs:update --app app-name STAR_example_com.crt private.pem (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
-4.    heroku git:remote -a your-environment-name-here -r custom-environment-name-here (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
-5.    heroku restart -a app_name (restarts your app dyno, very quickly)
+00.    `wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh` (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
+01.    `heroku login` (will log you into your apps, prompts heroku info)
+2.    `git push heroku-test next-release:master` (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
+3.    `heroku certs:update --app app-name STAR_example_com.crt private.pem` (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
+4.    `heroku git:remote -a your-environment-name-here -r custom-environment-name-here` (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
+5.    `heroku restart -a app_name` (restarts your app dyno, very quickly)
 
 
 ## Homebrew (package manager for Mac)
 
-00.	   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" (installs homebrew)
-01.	   brew doctor (tells you whats wrong with homebrew's formulas, whats going in the 'cellar')
-02.    brew update (updates homebrew)
-03.    brew upgrade your-package-here (updates a given brew, like node, npm, yeoman, etc)
-04.    brew link --overwrite your-package-here (forces symlink creation)
-05.    brew prune (removes dead symlinks)
-06.    brew [whatever] --dry-run (tells you whats going to happen before you do it)
-07.    brew install your-package-here (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
-08.    /usr/local/Cellar (where Homebrew installs stuff)
-09.    /usr/local/var/your-program-here (another place Homebrew apparently installs stuff)
-09.    users/your-macosxname-here/.node (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
-10.    users/your-macosxname-here/.node/lib/node_modules (where npm installs stuff if you use Homebrew)
+00.	   `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` (installs homebrew)
+01.	   `brew doctor` (tells you whats wrong with homebrew's formulas, whats going in the 'cellar')
+02.    `brew update` (updates homebrew)
+03.    `brew upgrade your-package-here` (updates a given brew, like node, npm, yeoman, etc)
+04.    `brew link --overwrite your-package-here` (forces symlink creation)
+05.    `brew prune` (removes dead symlinks)
+06.    `brew [whatever] --dry-run` (tells you whats going to happen before you do it)
+07.    `brew install your-package-here` (installs whatever you want via homebrew, be careful when you install node via homebrew - leave npm out of the install and [follow these instructions] (https://gist.github.com/DanHerbert/9520689))
+08.    `/usr/local/Cellar` (where Homebrew installs stuff)
+09.    `/usr/local/var/your-program-here` (another place Homebrew apparently installs stuff)
+09.    `users/your-macosxname-here/.node` (where Homebrew puts node's stuff, if you install via homebrew - you shouldnt do this! Use the node OSX installer instead)
+10.    `users/your-macosxname-here/.node/lib/node_modules` (where npm installs stuff if you use Homebrew)
 
-## Lando
+## Lando, replacement for Kalabox - local dev with Docker containers, very slick
 01.   `lando` (hello world more or less)
 02.   `lando config` (shows you version of kalabox)
 03.   `lando status` (tells you if the docker engine is up/down)
@@ -238,27 +238,104 @@
 09.   `lando pull --database=dev --files=dev` (pulls code, DB and files from Pantheon to your local)
 10.   `lando switch your-multidev-branch` (switches code and DB over to pantheon multidev branch)
 
+## Lando - steps to creating a local Pantheon instance
+01.   `git clone ssh://codeserver.dev.uniqueID@codeserver.dev.uniqueID.drush.in:2222/~/repository.git` (clone your git repo from Pantheon into `sites/your-site-here`)
+02.   `lando init` (run this command in `sites/your-site-here` and lando will put together a `.lando.yml` when you select 'Pantheon' from its list of valid recipes. You may have to setup a machine token through Pantheon if you haven't connected Pantheon and Lando together before)
+03.   `git add . && git commit -m 'My lando setup'` (put the lando setting into your repo, commit)
+04.   `lando pull` (this will walk you through pulling your files and DB from Pantheon. If this app is in production, pull the prod DB and prod files)
+05.   `lando start` (you'll kick start the Docker server and it will set itself up, you should be good now)
+
+## Lando - steps to creating a local WordPress instance, big difference is DB setup
+01.   `git clone git@github.com:username/reponame.git` (clone your git repo from Github into `sites/your-site-here`)
+02.   `lando init` (run this command in `sites/your-site-here` and lando will put together a `.lando.yml` when you select 'WordPress' from its list of valid recipes.)
+03.   Customize your `.lando.yml` to match your production environment as best you can. If you aren't using a container-based host like Pantheon, you won't get 1:1 parity. For WP-Engine, I used these settings:
+
+```
+# Site name
+name: your-site-name-here
+
+# Start with the default WordPress recipe
+recipe: wordpress
+
+# Configure the WordPress recipe
+# See: https://wordpress.org/about/requirements/
+# I'm trying to match up with wpengine settings as best I can
+config:
+
+  # Optionally specify the php version to use.
+  #
+  # If ommitted this will default to the latest php version supported by WordPress.
+  # Consult the `php` service to see what versions are available. Note that all
+  # such versions may not be supported in WordPress so YMMV.
+  #
+  # See: https://wordpress.org/about/requirements/
+  #
+  # NOTE: that this needs to be wrapped in quotes so that it is a string
+  php: '7.0'
+
+  # Optionally specify whether you want to serve drupal via nginx or apache
+  # If ommitted this will default to the latest apache
+  # See: https://wordpress.org/about/requirements/
+  via: nginx
+
+  # Optionally activate xdebug
+  #
+  # If you are having trouble getting xdebug to work please see:
+  # https://docs.devwithlando.io/services/php.html#using-xdebug
+  xdebug: true
+```
+
+04.   `git add . && git commit -m 'My lando setup'` (put the lando setting into your repo, commit)
+05.   `lando start` (you'll kick start the Docker server and it will set itself up, but you have no DB or files right now)
+06.   Go into your prod server, get your `wp-content/uploads` directory and manually put it into your new Lando install
+07.   Do the same thing for your database. You can use CLI mysql of phpMyAdmin, doesn't matter. But put the DB into the root of your project (don't commit it, you'll delete it later - don't freak).
+08.   Run `lando info` and note the 'internal connection' settings of the 'database'. Go put that info into your `wp-config.php` - which will look something like this for Lando/WP-Engine environment. Your DB port might be different though:
+
+```
+/** The name of the database for WordPress */
+define('DB_NAME', 'wordpress');
+
+/** MySQL database username */
+define('DB_USER', 'wordpress');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'wordpress');
+
+/** MySQL hostname */
+define('DB_HOST', 'database:3306');
+
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+```
+
+09.   `lando db-import 2018-02-14-1300-your-database-prod.sql` (This should import your DB and give you an `Import Complete` CLI feedback if you did this right.)
+10.   `lando wp search-replace 'your.productiondomain.com' 'your-site-name.lndo.site'` (This is a search - replace on the DB, note using the `lando` command first. This fixes the DB in the docker container, which is what you want to do.)
+
+
 ## MySQL Server (assumes use of homebrew)
-1.   brew install mysql (starts mysql package installation via homebrew)
-2.   unset TMPDIR (run this command immediately after installation)
-3.   mysql_install_db --verbose --user=/`whoami/` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp (allows you to actually use mysql with your user account)
-4.   /usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here' (sets new root password for mysql on your system)
-5.   /usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password' (finishes setting up mysql new root password)
-6.   /usr/local/opt/mysql/bin/mysql_secure_installation (allows for production server-level installation)
-7.   mysqladmin (command to do just about everything with mysql)
-8.   mysqld (starts mysql server, but not really a lot of times)
-9.   mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
-10.   mysql -u root -p (opens up a new kind of terminal command prompt, specific to mysql - will prompt for password (another layer of hell for you to wander through)
-11.   mysql> CREATE DATABASE your-database-name-here; (at the mysql prompt, this will create your database AFTER you have connected in the step above, don't forget the semicolon)
-12.   mysql> CREATE USER 'new-user-here'@'localhost' IDENTIFIED BY 'your-password-here'; (establishes new user in the DB)
-13.   mysql> GRANT ALL PRIVILEGES ON * . * TO 'new-user-here'@'localhost'; (gives all sql privledges to your new user)
-14.   mysql> FLUSH PRIVILEGES; (resets db to accept new user)
-15.   mysql> quit; (lets you leave the mysql specific prompt)
-16.   mysql> USE database-name-here; (chooses a database to manipulate)
-17.   mysql> mysql -u root -p database-name < database-to-be-imported.sql; (imports existing mysql DB into mysql itself - note that you must run this command from the folder you are in or change the last part of the command into an actual path)
-18.   mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password-here'; (creates a user with pw on localhost)
-19.   mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION; (gives new user sudo powers)
-20.   mysql> SHOW GRANTS FOR 'user'@'localhost'; (shows you what your new user can do)
+1.   `brew install mysql` (starts mysql package installation via homebrew)
+2.   `unset TMPDIR` (run this command immediately after installation)
+3.   `mysql_install_db --verbose --user=/`whoami/` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp` (allows you to actually use mysql with your user account)
+4.   `/usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here'` (sets new root password for mysql on your system)
+5.   `/usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password'` (finishes setting up mysql new root password)
+6.   `/usr/local/opt/mysql/bin/mysql_secure_installation` (allows for production server-level installation)
+7.   `mysqladmin` (command to do just about everything with mysql)
+8.   `mysqld` (starts mysql server, but not really a lot of times)
+9.   `mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here` (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
+10.   `mysql -u root -p` (opens up a new kind of terminal command prompt, specific to mysql - will prompt for password (another layer of hell for you to wander through)
+11.   `mysql> CREATE DATABASE your-database-name-here;` (at the mysql prompt, this will create your database AFTER you have connected in the step above, don't forget the semicolon)
+12.   `mysql> CREATE USER 'new-user-here'@'localhost' IDENTIFIED BY 'your-password-here';` (establishes new user in the DB)
+13.   `mysql> GRANT ALL PRIVILEGES ON * . * TO 'new-user-here'@'localhost';` (gives all sql privledges to your new user)
+14.   `mysql> FLUSH PRIVILEGES;` (resets db to accept new user)
+15.   `mysql> quit;` (lets you leave the mysql specific prompt)
+16.   `mysql> USE database-name-here;` (chooses a database to manipulate)
+17.   `mysql> mysql -u root -p database-name < database-to-be-imported.sql;` (imports existing mysql DB into mysql itself - note that you must run this command from the folder you are in or change the last part of the command into an actual path)
+18.   `mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'password-here';` (creates a user with pw on localhost)
+19.   `mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;` (gives new user sudo powers)
+20.   `mysql> SHOW GRANTS FOR 'user'@'localhost';` (shows you what your new user can do)
 
 ## Mongo
 01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
