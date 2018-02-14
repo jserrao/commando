@@ -206,14 +206,12 @@
 ## Heroku (Salesforce app cloud)
 00.    `wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh` (installs heroku toolbelt, assumes you have wget which you can install via homebrew if needed)
 01.    `heroku login` (will log you into your apps, prompts heroku info)
-2.    `git push heroku-test next-release:master` (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
-3.    `heroku certs:update --app app-name STAR_example_com.crt private.pem` (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
-4.    `heroku git:remote -a your-environment-name-here -r custom-environment-name-here` (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
-5.    `heroku restart -a app_name` (restarts your app dyno, very quickly)
-
+02.    `git push heroku-test next-release:master` (this will deploy from branch next-release to branch master, where heroku-test is your server for deployment)
+03.    `heroku certs:update --app app-name STAR_example_com.crt private.pem` (updates Heroku SSL certificate for a given environment, after --app flag, app-name, cert-file, key-file in that order)
+04.    `heroku git:remote -a your-environment-name-here -r custom-environment-name-here` (adds a heroku remote to your repo, -a flag is server name, -r is custom name for the server)
+05.    `heroku restart -a app_name` (restarts your app dyno, very quickly)
 
 ## Homebrew (package manager for Mac)
-
 00.	   `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` (installs homebrew)
 01.	   `brew doctor` (tells you whats wrong with homebrew's formulas, whats going in the 'cellar')
 02.    `brew update` (updates homebrew)
@@ -312,19 +310,21 @@ define('DB_COLLATE', '');
 ```
 
 09.   `lando db-import 2018-02-14-1300-your-database-prod.sql` (This should import your DB and give you an `Import Complete` CLI feedback if you did this right.)
-10.   `lando wp search-replace 'your.productiondomain.com' 'your-site-name.lndo.site'` (This is a search - replace on the DB, note using the `lando` command first. This fixes the DB in the docker container, which is what you want to do.)
+10.   `lando wp search-replace 'your.productiondomain.com' 'your-site-name.lndo.site:444'` (This is a search - replace on the DB, note using the `lando` command first. This fixes the DB in the docker container, which is what you want to do. Where did I get that crazy URL `*.lndo.site:444`? I got it from `lando info` and taking the SSL varient.)
+11.   Now if you use a theme with front-end tooling (build tools, Sass, Bower, etc), go into the theme and run the setups. `npm install`, `bower install`, `composer install`, etc. Commit the `*-lock.json` files you get.
+12.   Run a `lando rebuild` when you've done all of this. It will reset the DB and all the Docker containers, which I feel like is a good idea after all this crazy shit. Go to `your-site-name.lndo.site:444`, ok the security crap and you should be good to go now. How about that?
 
 
 ## MySQL Server (assumes use of homebrew)
-1.   `brew install mysql` (starts mysql package installation via homebrew)
-2.   `unset TMPDIR` (run this command immediately after installation)
-3.   `mysql_install_db --verbose --user=/`whoami/` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp` (allows you to actually use mysql with your user account)
-4.   `/usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here'` (sets new root password for mysql on your system)
-5.   `/usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password'` (finishes setting up mysql new root password)
-6.   `/usr/local/opt/mysql/bin/mysql_secure_installation` (allows for production server-level installation)
-7.   `mysqladmin` (command to do just about everything with mysql)
-8.   `mysqld` (starts mysql server, but not really a lot of times)
-9.   `mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here` (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
+01.   `brew install mysql` (starts mysql package installation via homebrew)
+02.   `unset TMPDIR` (run this command immediately after installation)
+03.   `mysql_install_db --verbose --user=/`whoami/` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp` (allows you to actually use mysql with your user account)
+04.   `/usr/local/opt/mysql/bin/mysqladmin -u root password 'your-new-password-here'` (sets new root password for mysql on your system)
+05.   `/usr/local/opt/mysql/bin/mysqladmin -u root -h MacBook-Pro.local password 'new-password'` (finishes setting up mysql new root password)
+06.   `/usr/local/opt/mysql/bin/mysql_secure_installation` (allows for production server-level installation)
+07.   `mysqladmin` (command to do just about everything with mysql)
+08.   `mysqld` (starts mysql server, but not really a lot of times)
+09.   `mysqladmin create your-db-here --port=port-number-here --user=user-name-here --password[=your-password-here] --host=your-hostname-here` (initializes new database, note randomly unique syntax for password - but of course some random shit like this shows up on a CLI command, amiright?)
 10.   `mysql -u root -p` (opens up a new kind of terminal command prompt, specific to mysql - will prompt for password (another layer of hell for you to wander through)
 11.   `mysql> CREATE DATABASE your-database-name-here;` (at the mysql prompt, this will create your database AFTER you have connected in the step above, don't forget the semicolon)
 12.   `mysql> CREATE USER 'new-user-here'@'localhost' IDENTIFIED BY 'your-password-here';` (establishes new user in the DB)
