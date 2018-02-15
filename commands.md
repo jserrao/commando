@@ -41,7 +41,7 @@
 39.    `ssh root@192.###.###.###` (gives you shell access to a server, will prompt for shell password)
 40.    `hostname` (prints your computer's hostname - Linux)
 41.    `exit` (logs you out of an SSH session)
-42.    
+42.    `su - username` (switches user to username)
 43.    `clear` (erases output in terminal window)
 44.    `sudo smbpasswd -a your-name-here` (changes your samba password for file transfer between OSes, good for virtual machines)
 45.    `sudo service smbd restart` (restarts samba)
@@ -66,8 +66,8 @@
 64.    `wget -mirror $url` (replicates site in your local folder - whichever folder you run the command from)
 65.    `gpasswd -a username-here sudo` (adds a user to sudo group, must be `root`)
 66.    `adduser username` (adds user to ubuntu)
-67.    `su - username` (switches user to username)
-68.    
+67.    `sudo apt-get update` (does simple updates, ubuntu)
+68.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
 69.    `<Return> ~ .` (kills an open ssh session)
 70.    `service mysqld start` (starts up the mysql server, assumes mysql is installed on the box)
 71.    `ls` (spits out list of directory view)
