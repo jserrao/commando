@@ -38,19 +38,19 @@
 36.    `source .your-dot-file-here` (this refreshes the file, makes life great)
 37.    `sudo your-samba-passwd-here -a quickstart` (changes samba password, allows websites folder in quickstart to appear in mac os x finder)
 38.    `ssh your-user-name-here@your-ip-address-here` (logs you into an SSH session)
-39.    `exit` (logs you out of an SSH session)
-40.    `scutil --get HostName` (prints your computer's hostname - OSX)
-41.    `scutil --set HostName your-name-hostname-here` (changes your computer's hostname - OSX)
-42.    `hostname` (prints your computer's hostname - Linux)
+39.    `ssh root@192.###.###.###` (gives you shell access to a server, will prompt for shell password)
+40.    `hostname` (prints your computer's hostname - Linux)
+41.    `exit` (logs you out of an SSH session)
+42.    
 43.    `clear` (erases output in terminal window)
 44.    `sudo smbpasswd -a your-name-here` (changes your samba password for file transfer between OSes, good for virtual machines)
 45.    `sudo service smbd restart` (restarts samba)
 46.    `rvm --default use 2.0.0` (forces Mac OSX to permanently use a newer version of Ruby)
-47.    `rvm --default use rubygems 2.0.03` (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress)
-48.    rubygems and ruby defaults have to be set everytime you open a new terminal session in OSX
-49.    `cordova platforms add ios`
-50.    `cordova platforms add android`
-51.    `cordova build && cordova emulate` (will build your app and emulate it so you can see what you did)
+47.    `rvm --default use rubygems 2.0.03` (forces Mac OSX to permantenly use new rubygems - necessary to run Jekyll/Octopress, probably outdated in 2017 but made sense in 2012)
+48.    `sudo reboot` (restarts your machine)
+49.    `sudo poweroff` (turns off your machine)
+50.    `scutil --get HostName` (prints your computer's hostname - OSX)
+51.    `scutil --set HostName your-name-hostname-here` (changes your computer's hostname - OSX)
 52.    `df` (gives you a readout of the disk space your system has available)
 53.    `pwd | pbcopy` (copies your current path in OSX only)
 54.    `xcode-select --install` (installs command line tools for xcode - only necessary on osx 10.8 and down, comes standard on osx 10.9 and up)
@@ -67,7 +67,7 @@
 65.    `gpasswd -a username-here sudo` (adds a user to sudo group, must be `root`)
 66.    `adduser username` (adds user to ubuntu)
 67.    `su - username` (switches user to username)
-68.    `ssh root@192.###.###.###` (gives you shell access to a server, will prompt for shell password)
+68.    
 69.    `<Return> ~ .` (kills an open ssh session)
 70.    `service mysqld start` (starts up the mysql server, assumes mysql is installed on the box)
 71.    `ls` (spits out list of directory view)
