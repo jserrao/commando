@@ -110,7 +110,7 @@ sdc    119.2G        disk
 
 03.     `cat /proc/mdstat` (this command shows you where your striping process is at - this can take hours depending on the size of your drives. With 4TB 5400RPM SATA3 drives, this took about 8 hours for me). 
 
-04.     `sudo mdadm --detail --scan` (shows you what's going on with your RAID array). Output looks like this:
+04.     `sudo mdadm --detail --scan` (shows you what's going on with your RAID array). Output looks like this: 
 
 ```
 ARRAY /dev/md/array-name metadata=1.2 name=server-name:array-name UUID=big:alphanumberic:string:here
