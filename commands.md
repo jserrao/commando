@@ -66,8 +66,8 @@
 64.    `wget -mirror $url` (replicates site in your local folder - whichever folder you run the command from)
 65.    `gpasswd -a username-here sudo` (adds a user to sudo group, must be `root`)
 66.    `adduser username` (adds user to ubuntu)
-67.    `sudo apt-get update` (does simple updates, ubuntu)
-68.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
+67.    `ls -a` (shows all files, including hidden ones)
+68.    `curl -I https://your-url-here.whatever` (gives you the HTTP headers for a given request)
 69.    `<Return> ~ .` (kills an open ssh session)
 70.    `service mysqld start` (starts up the mysql server, assumes mysql is installed on the box)
 71.    `ls` (spits out list of directory view)
@@ -87,8 +87,9 @@
 85.    `openssl req -new -newkey rsa:2048 -nodes -out star_example_com.csr -keyout star_example_com.pem -subj "/C=country-code-here/ST=state-code-here/L=city-here/O=organization-here/OU=organization-dept-here/CN=*.example.com/emailAddress=team@example.com"` (openssl command to generate a self-signed certificate and private key, note the CN part of command must match the type of SSL cert you need, single or multi-domain)
 86.    `sudo easy_install pip` (installs pip, package manager for python)
 87.    `alias custom-name-here="cd /Users/you/some/path/here"` (structure for making an aliased path, must be saved into OSX user's .profile file or it will not persist beyond current session)
-88.    `ls -a` (shows all files, including hidden ones)
-89.    `curl -I https://your-url-here.whatever` (gives you the HTTP headers for a given request)
+88.    `sudo apt-get update` (does simple updates, ubuntu)
+89.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
+90.    `audo apt autoremove` (cleans up all the old update packages)
 
 ## Linux/Ubuntu - Commands for making a RAID array
 
