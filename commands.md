@@ -263,6 +263,7 @@ ARRAY /dev/md/array-name metadata=1.2 name=server-name:array-name UUID=big:alpha
 08.   `lando pull` (take code from dev it will also ask via prompts)
 09.   `lando pull --database=dev --files=dev` (pulls code, DB and files from Pantheon to your local)
 10.   `lando switch your-multidev-branch` (switches code and DB over to pantheon multidev branch)
+11.   `lando wp cache flush` (empties wp cache, good if you're using redis plugin for Pantheon)
 
 ## Lando - steps to creating a local Pantheon instance
 01.   `git clone ssh://codeserver.dev.uniqueID@codeserver.dev.uniqueID.drush.in:2222/~/repository.git` (clone your git repo from Pantheon into `sites/your-site-here`)
