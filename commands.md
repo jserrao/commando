@@ -1,4 +1,4 @@
-## Basics of the CLI (command line interface for n00bs)
+## Basics of the POSIX CLI (command line interface for n00bs)
 
 1.    DONT DO THIS: `rm -rf /` (this means delete everything)
 2.    `ssh webadmin@1.2.3.4` (gets you into a server)
@@ -91,6 +91,33 @@
 89.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
 90.    `audo apt autoremove` (cleans up all the old update packages)
 
+## Linux/Ubuntu useful stuff (tested on Ubuntu 16.x)
+All the use of `sudo` down here might be making you nervous, but in an ideal Ubuntu setup, you'll make an admin user that isn't root. So this isn't so bad. See this [Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) on making a super user when you first light up your Ubuntu instance.
+
+01.    `sudo apt-get upgrade` (gets system updates)
+02.	   `sudo apt-get dist-upgrade` (upgrades you to a new version of ubuntu)
+03.    `sudo apt-get update` (installs system updates)
+04.    `sudo apt-get program-name-here` (if the program has a binary build, you get it via this command)
+05.    `sudo add-apt-repository ppa:webupd8team/sublime-text-2;` (gets you sublime text but any repo could be put here after the ppa: part)
+06.    `sudo apt-get update;` (run update again)
+07.    `sudo apt-get install sublime-text` (installs sublime)
+08.    `sudo apt-get install xsel` (helps get you pbcopy on ubuntu)
+09.    `alias pbcopy='xsel --clipboard --input'` (gets you pbcopy)
+10.    `alias pbpaste='xsel --clipboard --output'` (gets you pbpaste)
+11.    `sudo whereis your-filename-here` (tells you where a certain file is, but it really doesnt work)
+12.    `sudo /usr/share/webmin/changepass.pl /etc/webmin root new-password` (changes your webmin password, which is similar to an act of god)
+13.    `sudo a2enmod rewrite` (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
+14.    `/Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso` (path for virtual box guest additions if you are running an Ubuntu dev machine from OSX)
+15.    `CNTL+H in file browser` (shows hidden files in Ubuntu)
+16.    `sudo ufw allow 80/tcp` (adds typical port 80 to allowable ports list on ufw, which is ubuntu firewall)
+17.    `sudo ufw show added` (shows which ports you have allowed on ufw)
+18.    `sudo ufw enable` (enables ufw)
+19.    `sudo fallocate -l 4G /swapfile` (creates 4G swapfile)
+20.    `sudo chmod 600 /swapfile` (puts proper permissions on the swapfile directory so the world cant see it)
+21.    `sudo mkswap /swapfile` (format the folder for swap usage)
+22.    `sudo swapon /swapfile` (enable swapfile)
+23.    `sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'` (makes ubuntu server automatically load it's swap file on restart)
+
 ## Linux/Ubuntu - Commands for making a RAID array
 
 Digital Ocean has a [fantastic guide](https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu-16-04) for doing this with `mdadm`, the Linux RAID utility. Read it.
@@ -116,7 +143,6 @@ sdc    119.2G        disk
 ```
 ARRAY /dev/md/array-name metadata=1.2 name=server-name:array-name UUID=big:alphanumberic:string:here
 ```
-
 
 ## Ansible / Vagrant
 01.    `sudo pip install ansible` (uses pip to install ansible)
@@ -367,34 +393,34 @@ define('DB_COLLATE', '');
 20.   `mysql> SHOW GRANTS FOR 'user'@'localhost';` (shows you what your new user can do)
 
 ## Mongo
-01.    ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents (starts Mongo when your computer turns on)
-02.    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
-03.    mongod (starts the mongo server from CLI)
-04.    mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here local-db-folder-path (restores DB backup to a mongo server - assumes mongo is installed on destination server)
-05.    mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here --drop local-db-folder-path (Before restoring the collections from the dumped backup, drops the collections from the target database. --drop does not drop collections that are not in the backup.When the restore includes the admin database, mongorestore with --drop removes all user credentials and replaces them with the users defined in the dump file)
-06.    mongodump -h example.dbserver.here:port -d db-name -u dbuser-here -p password-here -o output-folder-here (exports DB to a destination folder - note that mongo does not output a single SQL-like file but a folder of .json and .bson files)
-07.    mongodb://db-user-here:db-password-here@example.db.server.com:port,example2.db.server.com:port/dbname-here (mongo URI to connect cloud instances - like mongolab > heroku)
-08.    mongo --eval (gives you ability to insert any mongo query but you dont always need it)
-09.    mongo asdf######.mongolab.com:#####/dbname -u dbuser -p dbpassword (connect to remote mongo instance on mongolab)
-10.    /usr/local/cellar/mongodb/3.0.3/bin (where you'll find the core mongo files if you install mongodb via homebrew on OSX - also remember this is where you have to run mongolab connection requests from for whatever reason)
-11.    mongodb://user-name:password@ds123456-a.mongolab.com:27799/db_name_here (URI string for a mongoDB)
+01.    `ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents` (starts Mongo when your computer turns on)
+02.    `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist` (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
+03.    `mongod` (starts the mongo server from CLI)
+04.    `mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here local-db-folder-path` (restores DB backup to a mongo server - assumes mongo is installed on destination server)
+05.    `mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here --drop local-db-folder-path` (Before restoring the collections from the dumped backup, drops the collections from the target database. --drop does not drop collections that are not in the backup.When the restore includes the admin database, mongorestore with --drop removes all user credentials and replaces them with the users defined in the dump file)
+06.    `mongodump -h example.dbserver.here:port -d db-name -u dbuser-here -p password-here -o output-folder-here` (exports DB to a destination folder - note that mongo does not output a single SQL-like file but a folder of .json and .bson files)
+07.    `mongodb://db-user-here:db-password-here@example.db.server.com:port,example2.db.server.com:port/dbname-here` (mongo URI to connect cloud instances - like mongolab > heroku)
+08.    `mongo --eval` (gives you ability to insert any mongo query but you dont always need it)
+09.    `mongo asdf######.mongolab.com:#####/dbname -u dbuser -p dbpassword` (connect to remote mongo instance on mongolab)
+10.    `/usr/local/cellar/mongodb/3.0.3/bin` (where you'll find the core mongo files if you install mongodb via homebrew on OSX - also remember this is where you have to run mongolab connection requests from for whatever reason)
+11.    `mongodb://user-name:password@ds123456-a.mongolab.com:27799/db_name_here` (URI string for a mongoDB)
 
 
 ## Mongo Commands
 #### very useful (https://docs.mongodb.org/manual/tutorial/write-scripts-for-the-mongo-shell/)
-01.    > db.getUsers() (tells you who is in the DB)
-02.    > db.createUser({user: "admin", pwd: "password", roles: [ { role: "readWrite", db: "db-name-here" }]}) (assigns user with read/write privledges to db)
-03.    > db.getUser("admin") (send string of whomever you want to find, tells you about them)
-04.    > db.getCollectionNames() (gives you a list of all the collections (aka tables) in your DB)
-05.    > db.getUsers() (gives you a list of all the users)
-06.    > db.collection.update({ "key" : "old-value" },{ $set: { "key" : "new-value" }},{ multi : true }) (sets a new value for all records that match key/old-value pair
+01.    `> db.getUsers()` (tells you who is in the DB)
+02.    `> db.createUser({user: "admin", pwd: "password", roles: [ { role: "readWrite", db: "db-name-here" }]})` (assigns user with read/write privledges to db)
+03.    `> db.getUser("admin")` (send string of whomever you want to find, tells you about them)
+04.    `> db.getCollectionNames()` (gives you a list of all the collections (aka tables) in your DB)
+05.    `> db.getUsers()` (gives you a list of all the users)
+06.    `> db.collection.update({ "key" : "old-value" },{ $set: { "key" : "new-value" }},{ multi : true })` (sets a new value for all records that match key/old-value pair
 
 
 ## PIP (Python install tool)
-01.    sudo easy_install pip (this should work on OSX, I needed sudo but maybe you don't?)
-02.    sudo pip install --upgrade pip (upgrades pip)
-03.    sudo pip list (shows the packages you have installed)
-04.    sudo pip show ansible (shows current status on a given package, 'ansible' in this case)
+01.    `sudo easy_install pip` (this should work on OSX, I needed sudo but maybe you don't? - you could also use homebrew)
+02.    `sudo pip install --upgrade pip` (upgrades pip)
+03.    `sudo pip list` (shows the packages you have installed)
+04.    `sudo pip show ansible` (shows current status on a given package, 'ansible' in this case)
 
 ## Terminus (Pantheon CLI)
 01.   `terminus auth login your@email.com` (authorizes your machine into pantheon - you need to create a machine token on pantheon.io before this will work)
@@ -409,49 +435,21 @@ define('DB_COLLATE', '');
 ## Transferring things (SFTP, SCP, rsync)
 
 ### SCP
-01.    [Everything SCP - go here](http://kb.iu.edu/data/agye.html)
-02.    scp -r local-path-goes-here remote-user@remote-hostname:your-remote-path-goes-here (EXAMPLE: scp -r /users/your-name/documents/mapbox/export/tile-set.mbtiles user@61.56.90.123:/home/user/mapbox-tiles/tile-set.mbtiles, the -r makes it recurse through the entire folder)
+[Everything SCP - go here](http://kb.iu.edu/data/agye.html)
+01.    `scp -r local-path-goes-here remote-user@remote-hostname:your-remote-path-goes-here` (EXAMPLE: `scp -r /users/your-name/documents/mapbox/export/tile-set.mbtiles user@61.56.90.123:/home/user/mapbox-tiles/tile-set.mbtiles`, the `-r` makes it recurse through the entire folder)
 
 ### SFTP
-01.    sftp your-host-here (gets you in, will put you at prompt likely need a password or have SSH key in place)
-02.    *ix commands - ls, pwd, cd (navigate REMOTE folders)
-03.    lls, lpwd, lcd (anything with `l` in front navigation LOCAL folders)
-04.    put /your/path/here/filename.txt (puts LOCAL file on the REMOTE server, navigate to where you want the file first!)
-05.    put -r /your/folder/here (puts LOCAL folder onto the REMOTE server)
-06.    get /your/path/here/filename.txt (gets REMOTE file and puts it on LOCAL machine)
-07.    get -r /your/folder/here (gets REMOTE folder and puts it on LOCAL machine)
+01.    `sftp your-host-here` (gets you in, will put you at prompt likely need a password or have SSH key in place)
+02.    `*ix commands - ls, pwd, cd` (navigate REMOTE folders)
+03.    `lls, lpwd, lcd` (anything with `l` in front navigation LOCAL folders)
+04.    `put /your/path/here/filename.txt` (puts LOCAL file on the REMOTE server, navigate to where you want the file first!)
+05.    `put -r /your/folder/here` (puts LOCAL folder onto the REMOTE server)
+06.    `get /your/path/here/filename.txt` (gets REMOTE file and puts it on LOCAL machine)
+07.    `get -r /your/folder/here` (gets REMOTE folder and puts it on LOCAL machine)
 
 ### rsync (the only way to fly)
-01.    rsync -rv --exclude='.git' /Users/your-name-here/sites/personal/example.com username-here@you-site.com:/home/user/public_html/site-folder (move a file up to a server via SSH while excluding .git | -r = recursive, -v = verbose output)
-03.    rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
-
-
-## Ubuntu
-
-01.    sudo apt-get upgrade (gets system updates)
-02.	   sudo apt-get dist-upgrade (upgrades you to a new version of ubuntu)
-03.    sudo apt-get update (installs system updates)
-04.    sudo apt-get program-name-here (if the program has a binary build, you get it via this command)
-05.    sudo add-apt-repository ppa:webupd8team/sublime-text-2; (gets you sublime text but any repo could be put here after the ppa: part)
-06.    sudo apt-get update; (run update again)
-07.    sudo apt-get install sublime-text (installs sublime)
-08.    sudo apt-get install xsel (helps get you pbcopy on ubuntu)
-09.    alias pbcopy='xsel --clipboard --input' (gets you pbcopy)
-10.    alias pbpaste='xsel --clipboard --output' (gets you pbpaste)
-11.    sudo whereis your-filename-here (tells you where a certain file is, but it really doesnt work)
-12.    sudo /usr/share/webmin/changepass.pl /etc/webmin root new-password (changes your webmin password, which is similar to an act of god)
-13.    sudo a2enmod rewrite (sets up rewrite_mod for Apache2 - this powers pretty URLs in many CMSs)
-14.    /Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso (path for virtual box guest additions if you are running an Ubuntu dev machine from OSX)
-15.    CNTL+H in file browser (shows hidden files in Ubuntu)
-16.    sudo ufw allow 80/tcp (adds typical port 80 to allowable ports list on ufw, which is ubuntu firewall)
-17.    sudo ufw show added (shows which ports you have allowed on ufw)
-18.    sudo ufw enable (enables ufw)
-19.    sudo fallocate -l 4G /swapfile (creates 4G swapfile)
-20.    sudo chmod 600 /swapfile (puts proper permissions on the swapfile directory so the world cant see it)
-21.    sudo mkswap /swapfile (format the folder for swap usage)
-22.    sudo swapon /swapfile (enable swapfile)
-23.    sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab' (makes ubuntu server automatically load it's swap file on restart)
-
+01.    `rsync -rv --exclude='.git' /Users/your-name-here/sites/personal/example.com username-here@you-site.com:/home/user/public_html/site-folder` (move a file up to a server via SSH while excluding .git | -r = recursive, -v = verbose output)
+03.    `rsync -rv /Users/your-name-here/sites/personal.com/ username-here@you-site.com:/home/user/public_html/site-folder` (NOTE - trailing slash on first path! this moves the contents of the folder, not the folder itself)
 
 ## Vim (an annoying text editor)
 
