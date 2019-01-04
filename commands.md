@@ -89,7 +89,7 @@
 87.    `alias custom-name-here="cd /Users/you/some/path/here"` (structure for making an aliased path, must be saved into OSX user's .profile file or it will not persist beyond current session)
 88.    `sudo apt-get update` (does simple updates, ubuntu)
 89.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
-90.    `audo apt autoremove` (cleans up all the old update packages)
+90.    `sudo apt autoremove` (cleans up all the old update packages)
 
 ## Linux/Ubuntu useful stuff (tested on Ubuntu 16.x)
 All the use of `sudo` down here might be making you nervous, but in an ideal Ubuntu setup, you'll make an admin user that isn't root. So this isn't so bad. See this [Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) on making a super user when you first light up your Ubuntu instance.
