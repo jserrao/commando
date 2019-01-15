@@ -91,7 +91,7 @@
 89.    `sudo apt-get dist-upgrade` (does all the updates, ubuntu)
 90.    `sudo apt autoremove` (cleans up all the old update packages)
 
-## Linux/Ubuntu useful stuff (tested on Ubuntu 16.x)
+## Linux/Ubuntu useful stuff (tested on Ubuntu Server 18.x)
 All the use of `sudo` down here might be making you nervous, but in an ideal Ubuntu setup, you'll make an admin user that isn't root. So this isn't so bad. See this [Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart) on making a super user when you first light up your Ubuntu instance.
 
 01.    `sudo apt-get upgrade` (gets system updates)
@@ -117,6 +117,9 @@ All the use of `sudo` down here might be making you nervous, but in an ideal Ubu
 21.    `sudo mkswap /swapfile` (format the folder for swap usage)
 22.    `sudo swapon /swapfile` (enable swapfile)
 23.    `sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'` (makes ubuntu server automatically load it's swap file on restart)
+24.    `sensors` (gives you readout on CPU core temps)
+25.    `lscpu` (details on CPU hardware and frequency utilization)
+26.    `sudo hddtemp /dev/sda /dev/sdb /whatever/your/drive/name/is` (gives you temperature info on HDDs)
 
 ## Linux/Ubuntu - Commands for making a RAID array
 
