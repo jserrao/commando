@@ -425,6 +425,13 @@ define('DB_COLLATE', '');
 03.    `sudo pip list` (shows the packages you have installed)
 04.    `sudo pip show ansible` (shows current status on a given package, 'ansible' in this case)
 
+## Shopify Themekit - for modifying existing Shopify Themes
+01.   `brew tap shopify/shopify` (sets up shopify stuff in the Homebrew brain)
+02.   `brew install themekit` (puts themekit in there)
+03.   `theme get --list -p=[your-password] -s=[you-store.myshopify.com]` (helps you to see what Shopify sees for your themes, retrieves the theme ID)
+04.   `theme get -p=[your-password] -s=[you-store.myshopify.com] -t=[your-theme-id]` (retrieves existing shopify theme into whatever directory you're currently in on the CLI)
+05.   `theme new --password=[your-password] --store=[your-store.myshopify.com] --name=[theme name]` (makes a completely new theme, but honestly if you're doing that, you should probably be using [Slate](https://shopify.github.io/slate/docs/about)
+
 ## Terminus (Pantheon CLI)
 01.   `terminus auth login your@email.com` (authorizes your machine into pantheon - you need to create a machine token on pantheon.io before this will work)
 2.    `terminus sites create --upsteam=#### --site=site-name --label="Something good" --org=your-org-id` (will give you a CLI walkthrough to install an instance on pantheon infrastruture)
