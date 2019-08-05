@@ -13,6 +13,7 @@
 11.    `cd ..` (jumps you back a directory)
 12.    `cd ../..` (jumps you back two directories)
 13.    `cd` (jumps you back to the home directory)
+13.    `cd ./whatever/you/want` (relative link with that dot in the front)
 14.    `cd /` (take you to the root directory)
 15.    `cd /home/your-username-here` (!where you are!)
 16.    `mv /path/goes/here/filename /path/goes/here/your-file-name-2`  (mv moves a file)
