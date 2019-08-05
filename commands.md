@@ -68,6 +68,7 @@
 65.    `gpasswd -a username-here sudo` (adds a user to sudo group, must be `root`)
 66.    `adduser username` (adds user to ubuntu)
 67.    `ls -a` (shows all files, including hidden ones)
+67.    `ls -al` (shows all the file info)
 68.    `curl -I https://your-url-here.whatever` (gives you the HTTP headers for a given request)
 69.    `<Return> ~ .` (kills an open ssh session)
 70.    `service mysqld start` (starts up the mysql server, assumes mysql is installed on the box)
