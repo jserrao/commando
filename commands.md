@@ -397,10 +397,23 @@ define('DB_COLLATE', '');
 19.   `mysql> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' WITH GRANT OPTION;` (gives new user sudo powers)
 20.   `mysql> SHOW GRANTS FOR 'user'@'localhost';` (shows you what your new user can do)
 
-## Mongo
-01.    `ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents` (starts Mongo when your computer turns on)
-02.    `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist` (starts Mongo for first time, assumes you installed via Homebrew and uses [OSX CLI tools launchctl launchd] (http://ss64.com/osx/launchctl.html))
-03.    `mongod` (starts the mongo server from CLI)
+## Mongo (installed via Homebrew)
+
+From: [https://stackoverflow.com/a/31165220/241153](https://stackoverflow.com/a/31165220/241153)
+
+If using `homebrew`, and you should
+- The databases are stored in the `/usr/local/var/mongodb/` directory
+- The mongod.conf file is here: `/usr/local/etc/mongod.conf`
+- The mongo logs can be found at `/usr/local/var/log/mongodb/`
+- The mongo binaries are here: `/usr/local/Cellar/mongodb/[version]/bin`
+
+If using without `homebrew`:
+- The database lives at `/data/db`
+- The mongod.conf files is here: `/usr/local/etc/mongod.conf`
+
+01.    `mongod` (starts the mongo server from CLI)
+02.    `brew services start mongo` (starts service from homebrew)
+03.    `mongod --dbpath /your/path/here` (overrides where mongod wants to put it's data)
 04.    `mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here local-db-folder-path` (restores DB backup to a mongo server - assumes mongo is installed on destination server)
 05.    `mongorestore -h dbserver.example.com:port -d db-name-here -u user-here -p password-here --drop local-db-folder-path` (Before restoring the collections from the dumped backup, drops the collections from the target database. --drop does not drop collections that are not in the backup.When the restore includes the admin database, mongorestore with --drop removes all user credentials and replaces them with the users defined in the dump file)
 06.    `mongodump -h example.dbserver.here:port -d db-name -u dbuser-here -p password-here -o output-folder-here` (exports DB to a destination folder - note that mongo does not output a single SQL-like file but a folder of .json and .bson files)
