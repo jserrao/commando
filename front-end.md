@@ -1,0 +1,18 @@
+## Front-end Tooling
+
+01.    `sudo gem install sass` (installs the CSS preprocessor SASS - you need to have Ruby + RVM installed first)
+02.    `sass -v` (calls up the sass version)
+03.    `grunt test` (preps your app for deployment)
+04.    `grunt server` (gets your localhost going)
+05.    `grunt whatever-command-you-want-here --force` (flag will override verbose testing periods)
+06.    `bower search` (shows entire bower JS library)
+07.    `bower search your-JS-package-here` (searches the directory)
+08.    `bower install your-JS-package-here` (adds a JS dependency to the project in your folder, works in conjunction with Yeoman)
+09.    `bower install your-js-package-here --save` (adds your package into bower.json dependency list)    	
+10.    `npm install -g yo generator-wordpress` (installs the community's favorite wordpress yeoman generator - assumes you have yeoman and npm installed)
+11.    `npm install -g http-server` (adds a local server you can just spin up)
+12.    `http-server /your/path/here` (starts up at localhost:8080 that points at whatever path you tell it, simple server)
+13.    `http-server /your/path/here -p 5000` (starts up at localhost:5000, different path declaration)
+14.    `apachectl start` (starts http server at http://localhost)
+15.    `apachectl stop` (stops http server at http://localhost)
+16.    `apachectl restart` (restarts your server)

@@ -10,13 +10,22 @@ Index of Commands
 -----
 
 So far, I have the following breakdowns of commands:
-* Command Line Basics
-* Front-end Tooling
-* Git
-* Homebrew (Mac package manager)
-* Transfer protocols (SFTP, SCP and rsync)
-* Ubuntu
-* Vim
+* [Command Line Basics](basics.md)
+* [Ansible w/ Vagrant](ansible.md)
+* [AWS - just cert replacement](aws.md)
+* [Front-end Tooling, general stuff](front-end.md)
+* [Git](git.md)
+* [Heroku, deployment](heroku.md)
+* [Homebrew (Mac package manager)](homebrew.md)
+* [Lando, Docker-based local dev + setup](lando.md)
+* [Linux/Ubuntu](linux.md)
+* [MongoDB w/ setup commands + DB commands](mongodb.md)
+* [MySQL](mysql.md)
+* [Python + PIP, just a stub for now](python.md)
+* [Shopify, theming mostly](shopify.md)
+* [Terminus, from Pantheon](terminus-pantheon.md)
+* [Transfer protocols (SFTP, SCP and rsync)](transfer.md)
+* [Vim](vim.md)
 
 Yeah, there is some overlap here but nothing big. If you have questions, hit me up via github and I'm sure we can sort it out.
 
