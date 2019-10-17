@@ -1,5 +1,0 @@
-## Python / PIP (Python install tool)
-01.    `sudo easy_install pip` (this should work on OSX, I needed sudo but maybe you don't? - you could also use homebrew)
-02.    `sudo pip install --upgrade pip` (upgrades pip)
-03.    `sudo pip list` (shows the packages you have installed)
-04.    `sudo pip show ansible` (shows current status on a given package, 'ansible' in this case)

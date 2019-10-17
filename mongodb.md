@@ -32,3 +32,24 @@ If using without `homebrew`:
 04.    `> db.getCollectionNames()` (gives you a list of all the collections (aka tables) in your DB)
 05.    `> db.getUsers()` (gives you a list of all the users)
 06.    `> db.collection.update({ "key" : "old-value" },{ $set: { "key" : "new-value" }},{ multi : true })` (sets a new value for all records that match key/old-value pair
+7.     `> db.collection.count()` (returns the number of records in a collection, argument is empty - it will just natively return the number)
+8.     `> db.collection.find({ "key": "value" })` (finds a certain record by the key value, or a much bigger descriptive collection of records if need be, see example below)
+```
+db.restaurants.find(
+  {
+    "name": "The Coupe"
+  }
+)
+```
+
+9.   `> db.collection.update()  
+
+```
+db.your_collection.update(
+  { criteria },
+  {
+    $set: { assignments }
+  },
+  { options }
+)
+```
