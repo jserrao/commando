@@ -58,7 +58,7 @@ db.restaurants.find(
 )
 ```
 
-9. `> db.collection.update()  
+9. `> db.collection.update()` 
 
 ```
 db.your_collection.update(
