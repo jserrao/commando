@@ -69,3 +69,4 @@
 66.   `git remote rename your-old-name-here your-new-name-here (rename remote)
 67.   `curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'` (Using GitHub API v3 to create a repo from terminal without using web interface. Then 'git remote add')
 68.   `git fetch <remote> <remote-branch>:<local-branch>` (creates a real local branch of a remote repo, not tracking branch)
+69.   `git commit -m "Great commit" -m "With a beautifully descriptive message afterwards"` (assigns both a git commit message and a git description at the same time)
