@@ -70,3 +70,5 @@
 67.   `curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'` (Using GitHub API v3 to create a repo from terminal without using web interface. Then 'git remote add')
 68.   `git fetch <remote> <remote-branch>:<local-branch>` (creates a real local branch of a remote repo, not tracking branch)
 69.   `git commit -m "Great commit" -m "With a beautifully descriptive message afterwards"` (assigns both a git commit message and a git description at the same time)
+70.   `git checkout --track origin/branch-name-here` (creates remote tracking branch)
+71.   `git branch -d -r origin/branch-name-here` (deletes remote tracking branch)
