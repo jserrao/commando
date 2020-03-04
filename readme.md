@@ -22,6 +22,7 @@ So far, I have the following breakdowns of commands:
 * [Linux/Ubuntu](linux.md)
 * [MongoDB w/ setup commands + DB commands](mongodb.md)
 * [MySQL](mysql.md)
+* [Node.js, nvm, npm and yarn](node.md)
 * [Python + PIP](python.md)
 * [Shopify, theming mostly](shopify.md)
 * [Terminus, from Pantheon](terminus-pantheon.md)
@@ -40,11 +41,11 @@ This is an educational resource and reference point for all the fun you will hav
 What Do I Need to Use This?
 -----
 
-You are going to need a text editor and a terminal. I like Sublime Text and iTerm2 terminal on the Mac and in Ubuntu, I use the included Vim text editor and the Guake terminal.
+You are going to need a text editor and a terminal. I like VS Code and iTerm2 terminal on the Mac and in Ubuntu, I use the included Vim text editor and the Guake terminal.
 
 Links to the Goods:
-* [Sublime Text](http://www.sublimetext.com/2)
-* [iTerm2](http://www.iterm2.com)
+* [VS Code](https://code.visualstudio.com)
+* [iTerm2](https://www.iterm2.com)
 * [Guake](https://apps.ubuntu.com/cat/applications/precise/guake/)
 
 OSX has a unix-like core, so most of the commands on Linux work for OSX. There are some deviations, noted where appropriate in the command reference docs.
