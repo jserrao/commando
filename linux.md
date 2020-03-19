@@ -30,3 +30,30 @@ All the use of `sudo` down here might be making you nervous, but in an ideal Ubu
 27.    `sudo hddtemp /dev/sda /dev/sdb /whatever/your/drive/name/is` (gives you temperature info on HDDs)
 28.    `lsusb` (tells you which devices are connected to your linux install)
 29.    `sudo lshw -short` (gives you read out of all your hardware)
+
+Using Handbrake
+
+1) Find out where you DVD drive is on your server
+`sudo lshw -short`
+
+2) Locate the drive for `lshw` command and find the 'device' path, should be something like:
+`/dev/cdrom`
+
+3) Manually, make a mount point for the drive on your system (should probably be at root)
+`sudo mkdir /mounted/cdrom`
+
+4) Mount drive to mount point
+`sudo mount -t auto /dev/cdrom /mounted/cdrom`
+
+5) Install HandBrake repo 
+`sudo add-apt-repository ppa:stebbins/handbrake-releases`
+`sudo apt-get update`
+
+6) Install HandBrakeCLI
+`sudo apt install handbrake-cli`
+
+7) Most DVDs are locked, libdvdcss decodes them
+`sudo apt install libdvd-pkg && sudo dpkg-reconfigure libdvd-pkg`
+
+8) Uses HandbrakeCLI to rip movie (-i path/to/mounted/dvd, -o output/destination, -e video-encoding-format, -q quality, -b audio-bit-rate-aac)
+`HandBrakeCLI -i /mounted/cdrom/VIDEO_TS -o /media/video/your_movie_here.mp4 -e x264 -q 22 -B 160`
