@@ -29,3 +29,4 @@ All the use of `sudo` down here might be making you nervous, but in an ideal Ubu
 26.    `lscpu` (details on CPU hardware and frequency utilization)
 27.    `sudo hddtemp /dev/sda /dev/sdb /whatever/your/drive/name/is` (gives you temperature info on HDDs)
 28.    `lsusb` (tells you which devices are connected to your linux install)
+29.    `sudo lshw -short` (gives you read out of all your hardware)
