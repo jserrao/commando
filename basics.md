@@ -91,3 +91,4 @@
 87.    `alias custom-name-here="cd /Users/you/some/path/here"` (structure for making an aliased path, must be saved into OSX user's .profile file or it will not persist beyond current session)
 88.    `curl -IL https://your-domain.com/file.jpg` (gives you an overview of the connect to download the asset - HTTP1 or 2, CORS, etc)
 89.    `top` (displays all processes currently running on your Mac - note the pid because that's the process number each mac process is assigned by the OS)
+90.    `ls -F |grep -v / | wc -l` (counts the lines in a folder)
