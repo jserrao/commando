@@ -20,3 +20,4 @@
 18.    `nvm use VERSION` (where `VERSION` is node version, like `14` - switches which version of node you're using)
 19.    `nvm install NEW_VERSION --reinstall-packages-from=OLD_VERSION` (helps install the latest LTS release without losing your last batch of stuff)
 20.    `nvm alias default VERSION` (tells your computer what default node to use)
+21.    `xcrun simctl list devices` (which xcode devices are available on your mac - requires full xcode to be installed)
