@@ -66,7 +66,7 @@
 63.   `git rev-list --count branch-name-here` (shows you how many commits are in a given branch)
 64.   `git push -f <remote> <branch>` (forces an overrite of remote with your branch, BE CAREFUL)
 65.   `git rm -r --cached myFolder` (removes files from git repo but not filesystem - so they are there just not tracked. To me this implies that you should also be added whatever folder removed with this method into your .gitignore file).
-66.   `git remote rename your-old-name-here your-new-name-here (rename remote)
+66.   `git remote rename your-old-name-here your-new-name-here` (rename remote)
 67.   `curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'` (Using GitHub API v3 to create a repo from terminal without using web interface. Then 'git remote add')
 68.   `git fetch <remote> <remote-branch>:<local-branch>` (creates a real local branch of a remote repo, not tracking branch)
 69.   `git commit -m "Great commit" -m "With a beautifully descriptive message afterwards"` (assigns both a git commit message and a git description at the same time)
