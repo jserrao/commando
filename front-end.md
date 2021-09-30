@@ -21,3 +21,15 @@
 19.    `nvm install NEW_VERSION --reinstall-packages-from=OLD_VERSION` (helps install the latest LTS release without losing your last batch of stuff)
 20.    `nvm alias default VERSION` (tells your computer what default node to use)
 21.    `xcrun simctl list devices` (which xcode devices are available on your mac - requires full xcode to be installed)
+
+## Expo / React Native
+
+To clear cache, as of Expo SDK v42.0.0 on MacOS 11.5.2 (Big Sur):
+
+1. `rm -rf node_modules` (dumps node_modules)
+2. `yarn cache clean` (runs cache cleaner for yarn)
+3. `yarn` (reinstalls deps)
+4. `watchman watch-del-all` (kills cache in live updated watchman)
+5. `rm -fr $TMPDIR/haste-map-*` (to be honest, I'm not really sure)
+6. `rm -rf $TMPDIR/metro-cache` (works to clear metro builder cache)
+7. `expo start --clear` (restarts expo server and clears it's cache - `.expo` folder in your file explorer)
